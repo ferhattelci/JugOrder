@@ -8,15 +8,27 @@
 
 import UIKit
 
+var Products: [String : [String : NSMutableArray]] = [:]
+var allProducts : [ProductModel] = []
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, HomeModelProtocol {
+    
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let homeModel = DataModel()
+        //homeModel.delegate = self
+        homeModel.downloadProducts()
+        homeModel.delegate = self
+        
         return true
+    }
+    
+    func productsDownloaded(items: [String : [String : NSMutableArray]], allItems: [ProductModel]) {
+        Products = items
+        allProducts = allItems
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
