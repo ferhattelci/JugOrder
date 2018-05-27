@@ -10,6 +10,7 @@ import UIKit
 
 class ItemViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     var arrayOfProducts = NSMutableArray()
 
     override func viewDidLoad() {
@@ -47,8 +48,14 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
 
+    @IBAction func addProduct(_ sender: Any) {
+        let buttonPosition:CGPoint = (sender as AnyObject).convert(.zero, to: self.collectionView)
+        let indexPath:IndexPath = self.collectionView.indexPathForItem(at: buttonPosition)!
+        let product = arrayOfProducts[indexPath.row] as! ProductModel
+
+        orderedProducts.append(product)
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
     }
 
 }

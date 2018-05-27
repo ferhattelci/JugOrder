@@ -81,7 +81,7 @@ class DataModel: NSObject, URLSessionDataDelegate{
                 product.price = Int(price)
                 
                 
-                if var categoryExists = result[category] as? [String:NSMutableArray]{
+                if var categoryExists = result[category]{
                     //category exist
                     if let subcategoryExists = categoryExists[subcategory]{
                         //subcategory exist
@@ -105,9 +105,12 @@ class DataModel: NSObject, URLSessionDataDelegate{
                 
 
                 result2.append(product)
+
+            }
+            result2.sort {
+                $0.name! < $1.name!
             }
             
-
  
   
         }

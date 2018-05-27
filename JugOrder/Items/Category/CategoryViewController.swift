@@ -23,6 +23,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayOfCategories.count
@@ -50,8 +51,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         viewController.category = key
         self.navigationController?.pushViewController(viewController, animated: true)
         
-        
-
         
     }
     

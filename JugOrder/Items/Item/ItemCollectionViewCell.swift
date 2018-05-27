@@ -15,4 +15,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productCategory: UILabel!
     @IBOutlet weak var productImage: UIImageView!
+    
+    
+  
 }
