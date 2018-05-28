@@ -29,8 +29,9 @@ class SnackViewController: UIViewController {
         if segue.destination is CategoryViewController
         {
             let vc = segue.destination as? CategoryViewController
-            let keys:[String: NSMutableArray] = Products["Snacks"]!
-            vc?.arrayOfCategories = keys
+            let keys:[String: [ProductModel]] = Products["Snacks"]!
+            let sortedKeys = keys.sorted(by: { $0.key < $1.key })
+            vc?.arrayOfCategories = sortedKeys
         }
     }
 

@@ -11,11 +11,10 @@ import UIKit
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var arrayOfCategories = [String: NSMutableArray]()
+    var arrayOfCategories = [(key: String, value: [ProductModel])]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -26,14 +25,16 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
         return arrayOfCategories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CategoryCollectionViewCell
-        let product = Array(arrayOfCategories.keys)[indexPath.row]
-        
-        cell.categoryName.text = product
+
+        //let product = Array(arrayOfCategories.keys)[indexPath.row]
+        let product = arrayOfCategories[indexPath.row]
+        cell.categoryName.text = product.key
         
         // add a border
         cell.layer.borderColor = UIColor.lightGray.cgColor
@@ -43,12 +44,14 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let key = Array(arrayOfCategories.keys)[indexPath.row]
-        let products = arrayOfCategories[key]
+       // let key = Array(arrayOfCategories.keys)[indexPath.row]
+        let key = arrayOfCategories[indexPath.row]
+
+        let products = key.value
         
         let viewController = storyboard?.instantiateViewController(withIdentifier: "ItemsViewController") as! ItemsViewController
-        viewController.arrayOfProducts = products!
-        viewController.category = key
+        viewController.arrayOfProducts = products
+        viewController.category = key.key
         self.navigationController?.pushViewController(viewController, animated: true)
         
         
@@ -57,4 +60,13 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
 
 
 
+}
+extension Array where Element: ProductModel {
+    //This method only takes an order type. i.e ComparisonResult.orderedAscending
+    func sortProductByName(_ order: ComparisonResult) -> [ProductModel] {
+        let sortedArray = self.sorted { (product1, product2) -> Bool in
+            return product1.checkForOrder(product2, order)
+        }
+        return sortedArray
+    }
 }

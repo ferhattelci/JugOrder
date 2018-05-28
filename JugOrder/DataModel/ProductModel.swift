@@ -34,7 +34,12 @@ class ProductModel: NSObject {
         self.amount = amount
         
     }
-    
-   
+    func checkForOrder(_ otherProduct: ProductModel, _ order: ComparisonResult) -> Bool {
+    if let createdName = self.name, let othersName = otherProduct.name {
+        //This line will compare both date with the order that has been passed.
+        return createdName.compare(othersName) == order
+    }
+    return false
+}
     
 }

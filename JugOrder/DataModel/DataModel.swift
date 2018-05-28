@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeModelProtocol: class {
-    func productsDownloaded(items: [String: [String:NSMutableArray]], allItems: [ProductModel])
+    func productsDownloaded(items: [String: [String:[ProductModel]]], allItems: [ProductModel])
 }
 
 
@@ -50,7 +50,7 @@ class DataModel: NSObject, URLSessionDataDelegate{
         }
         
         var jsonElement = NSDictionary()
-        var result = [String: [String:NSMutableArray]]()
+        var result = [String: [String:[ProductModel]]]()
         var result2 = [ProductModel]()
 
         var jsonResults = NSArray()
@@ -83,14 +83,17 @@ class DataModel: NSObject, URLSessionDataDelegate{
                 
                 if var categoryExists = result[category]{
                     //category exist
-                    if let subcategoryExists = categoryExists[subcategory]{
+                    if var subcategoryExists = categoryExists[subcategory]{
                         //subcategory exist
-                        subcategoryExists.add(product)
+                        subcategoryExists.append(product)
+                        categoryExists.updateValue(subcategoryExists, forKey: subcategory)
+                        result.updateValue(categoryExists, forKey: category)
+                        //result.updateValue(subcategoryExists, forKey: category)
                     }
                     else {
                         //subcategory not exist
-                        let products = NSMutableArray()
-                        products.add(product)
+                        var products = [ProductModel]()
+                        products.append(product)
                         categoryExists.updateValue(products, forKey: subcategory)
                         result.updateValue(categoryExists, forKey: category)
                         
@@ -98,8 +101,8 @@ class DataModel: NSObject, URLSessionDataDelegate{
                 }
                 else {
                     //category does not exist
-                    let products = NSMutableArray()
-                    products.add(product)
+                    var products = [ProductModel]()
+                    products.append(product)
                     result.updateValue([subcategory : products], forKey: category)
                 }
                 

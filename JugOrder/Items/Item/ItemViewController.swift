@@ -11,12 +11,12 @@ import UIKit
 class ItemViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var arrayOfProducts = NSMutableArray()
+    var arrayOfProducts = [ProductModel]()
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        arrayOfProducts = arrayOfProducts.sortProductByName(.orderedAscending) 
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +31,7 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ItemCollectionViewCell
-        let product = arrayOfProducts[indexPath.row] as! ProductModel
+        let product = arrayOfProducts[indexPath.row]
         
         
         cell.productCategory.text = product.category
@@ -51,7 +51,7 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBAction func addProduct(_ sender: Any) {
         let buttonPosition:CGPoint = (sender as AnyObject).convert(.zero, to: self.collectionView)
         let indexPath:IndexPath = self.collectionView.indexPathForItem(at: buttonPosition)!
-        let product = arrayOfProducts[indexPath.row] as! ProductModel
+        let product = arrayOfProducts[indexPath.row] 
 
         orderedProducts.append(product)
     }
@@ -59,3 +59,4 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
 
 }
+

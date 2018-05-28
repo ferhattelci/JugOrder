@@ -30,9 +30,10 @@ class HookahViewController: UIViewController {
         if segue.destination is CategoryViewController
         {
             let vc = segue.destination as? CategoryViewController
-            let values:[String: NSMutableArray] = Products["Tabak"]!
+            let values:[String: [ProductModel]] = Products["Tabak"]!
 
-            vc?.arrayOfCategories = values
+            let sortedKeys = values.sorted(by: { $0.key < $1.key })
+            vc?.arrayOfCategories = sortedKeys
         }
     }
    

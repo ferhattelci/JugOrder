@@ -8,7 +8,7 @@
 
 import UIKit
 
-var Products: [String : [String : NSMutableArray]] = [:]
+var Products: [String : [String : [ProductModel]]] = [:]
 var allProducts : [ProductModel] = []
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, HomeModelProtocol {
@@ -22,10 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HomeModelProtocol {
         homeModel.downloadProducts()
         homeModel.delegate = self
         
+        
+        UISearchBar.appearance().tintColor = .jugRed
+        UINavigationBar.appearance().tintColor = .jugRed
+
         return true
     }
     
-    func productsDownloaded(items: [String : [String : NSMutableArray]], allItems: [ProductModel]) {
+    func productsDownloaded(items: [String : [String : [ProductModel]]], allItems: [ProductModel]) {
         Products = items
         allProducts = allItems
         

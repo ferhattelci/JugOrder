@@ -9,18 +9,29 @@
 import UIKit
 
 class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    
+    let searchController = UISearchController(searchResultsController: nil)
 
     private var arrayOfProducts : [ProductModel] = []
     @IBOutlet weak var collectionView: UICollectionView!
     private var filteredArrayOfProducts : [ProductModel] = []
     var isFiltering: Bool = false
-    @IBOutlet weak var searchBar: UISearchBar!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Suche ..."
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        // Setup the Scope Bar
+        searchController.searchBar.scopeButtonTitles = ["All", "Hookah", "Drinks", "Snacks"]
+        searchController.searchBar.delegate = self
+        
+        //navigationController?.navigationBar.prefersLargeTitles = true
         arrayOfProducts = allProducts
         // Do any additional setup after loading the view.
     }
@@ -35,9 +46,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         
     }
     
-    @IBAction func closeVC(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if isFiltering {
@@ -67,6 +75,20 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         }
     }
     
+    @IBAction func addProduct(_ sender: Any) {
+        let buttonPosition:CGPoint = (sender as AnyObject).convert(.zero, to: self.collectionView)
+        let indexPath:IndexPath = self.collectionView.indexPathForItem(at: buttonPosition)!
+        var product = ProductModel()
+        if isFiltering {
+            product = filteredArrayOfProducts[indexPath.row]
+
+        } else {
+            product = arrayOfProducts[indexPath.row] 
+
+        }
+        
+        orderedProducts.append(product)
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ItemCollectionViewCell
@@ -88,4 +110,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
 
 
+}
+extension SearchViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+    }
 }

@@ -8,16 +8,25 @@
 
 import UIKit
 
-class ItemsViewController: UIViewController {
+class ItemsViewController: UIViewController, UISearchBarDelegate {
 
     var category = String()
-    var arrayOfProducts = NSMutableArray()
+    var arrayOfProducts = [ProductModel]()
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.title = category
-
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Suche ..."
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        // Setup the Scope Bar
+       // searchController.searchBar.scopeButtonTitles = ["All", "Hookah", "Drinks", "Snacks"]
+        searchController.searchBar.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -36,4 +45,10 @@ class ItemsViewController: UIViewController {
         }
     }
 
+}
+extension ItemsViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+    }
 }
