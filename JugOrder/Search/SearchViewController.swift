@@ -101,6 +101,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
             }
         } else {
             //Give a dialog out to show a dialog
+            let alert = UIAlertController(title: "Menge angeben", message: "Bitte gebe die Menge durch den Schieberegler ein.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "verstanden", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
         }
         
         //reset to 0
