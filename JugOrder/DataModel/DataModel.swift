@@ -18,7 +18,7 @@ class DataModel: NSObject, URLSessionDataDelegate{
     weak var delegate: HomeModelProtocol!
 
     func downloadProducts(){
-        let urlPath = "http://192.168.23.178/api/products/read.php" //this will be changed to the path where service.php lives
+        let urlPath = "http://qurnaz01.myftp.org/api/products/read.php" //this will be changed to the path where service.php lives
         
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
@@ -79,7 +79,12 @@ class DataModel: NSObject, URLSessionDataDelegate{
                 product.category = category
                 product.subCategory = subcategory
                 product.price = Int(price)
+                //Standard value
+                product.count = 0
                 
+                if product.imagePath != nil || !imagePath.isEmpty{
+                    product.getImageFromURL()
+                }
                 
                 if var categoryExists = result[category]{
                     //category exist

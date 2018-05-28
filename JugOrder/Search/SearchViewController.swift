@@ -20,6 +20,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
+
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -78,18 +80,51 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     @IBAction func addProduct(_ sender: Any) {
         let buttonPosition:CGPoint = (sender as AnyObject).convert(.zero, to: self.collectionView)
         let indexPath:IndexPath = self.collectionView.indexPathForItem(at: buttonPosition)!
-        var product = ProductModel()
+        var productA = ProductModel()
         if isFiltering {
-            product = filteredArrayOfProducts[indexPath.row]
+            productA = filteredArrayOfProducts[indexPath.row]
 
         } else {
-            product = arrayOfProducts[indexPath.row] 
+            productA = arrayOfProducts[indexPath.row]
 
         }
+        let productB = productA.copy() as! ProductModel
         
-        orderedProducts.append(product)
+        if (productB.count! > 0){
+            orderedProducts.append(productB)
+            
+            if let tabItems = self.tabBarController?.tabBar.items as NSArray?
+            {
+                // In this case we want to modify the badge number of the third tab:
+                let tabItem = tabItems[0] as! UITabBarItem
+                tabItem.badgeValue = String(orderedProducts.count)
+            }
+        } else {
+            //Give a dialog out to show a dialog
+        }
+        
+        //reset to 0
+        productA.count = 0
+        UIView.performWithoutAnimation {
+            self.collectionView.reloadItems(at:[indexPath])
+        }
     }
     
+    
+    @objc func sliderValueChanged(sender: UISlider){
+        if isFiltering {
+            filteredArrayOfProducts[sender.tag].count = Int(sender.value)
+        } else {
+            arrayOfProducts[sender.tag].count = Int(sender.value)
+        }
+        
+        // collectionView.reloadItems(at: [indexPath])
+
+        UIView.performWithoutAnimation {
+            self.collectionView.reloadItems(at:[IndexPath.init(row: sender.tag, section: 0)])
+        }
+        
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ItemCollectionViewCell
         let product = object(at: indexPath)
@@ -98,6 +133,14 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         cell.productDetails.text = "Details"
         cell.productName.text = product.name
         cell.productPrice.text = String(product.price!) + " €"
+        cell.productAmount.text = String(product.count!)
+        if (product.image != nil) {
+            cell.productImage.image = product.image!
+        }
+        cell.amountSlider.tag = indexPath.row // Use tag to see which cell your slider is located
+        cell.amountSlider.addTarget(self, action: #selector(sliderValueChanged), for: UIControlEvents.valueChanged)
+        cell.amountSlider.value = Float(product.count!)
+
         
         
         // add a border

@@ -17,6 +17,16 @@ class ItemsViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = category
+     
+        navigationController?.navigationBar.prefersLargeTitles = true
+
+        //Setup Segment
+        let segment: UISegmentedControl = UISegmentedControl(items: ["Alle", "Favoriten"])
+        segment.sizeToFit()
+        segment.tintColor = .jugRed
+        segment.selectedSegmentIndex = 0;
+     
+        self.navigationItem.titleView = segment
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false

@@ -18,7 +18,8 @@ class DrinkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
+
         // Do any additional setup after loading the view.
     }
     
@@ -34,7 +35,7 @@ class DrinkViewController: UIViewController {
         if segue.destination is CategoryViewController
         {
             let vc = segue.destination as? CategoryViewController
-            let keys:[String: [ProductModel]] = Products["Getränke"]!
+            let keys:[String: [ProductModel]] = Products["Drinks"]!
 
             let sortedKeys = keys.sorted(by: { $0.key < $1.key })
             vc?.arrayOfCategories = sortedKeys
