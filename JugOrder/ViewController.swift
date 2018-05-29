@@ -43,10 +43,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.delegate = self
 
         cell.productCategory.text = product.category
-        cell.productDetails.text = "Details"
+        cell.productDetails.text = product.details
         cell.productTitle.text = product.name
         cell.productPrice.text = String(product.price!) + " €"
         cell.productAmount.text = "Menge " + String(product.count!)
+        if product.image != nil{
+            cell.productImage.image = product.image!
+        }
+        
         
         return cell
     }

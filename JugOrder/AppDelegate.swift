@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HomeModelProtocol {
         homeModel.delegate = self
         
         
-        UISearchBar.appearance().tintColor = .jugRed
-        UINavigationBar.appearance().tintColor = .jugRed
+        UISearchBar.appearance().tintColor = .jugWhite
+        UINavigationBar.appearance().tintColor = .jugWhite
 
         return true
     }

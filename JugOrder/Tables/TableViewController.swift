@@ -15,7 +15,7 @@ class TableViewController: UIViewController {
         //Setup Segment
         let segment: UISegmentedControl = UISegmentedControl(items: ["EG", "Playroom", "OG"])
         segment.sizeToFit()
-        segment.tintColor = .jugRed
+        segment.tintColor = .jugWhite
         segment.selectedSegmentIndex = 0;
         self.navigationItem.titleView = segment
         // Do any additional setup after loading the view.

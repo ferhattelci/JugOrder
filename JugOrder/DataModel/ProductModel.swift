@@ -14,6 +14,8 @@ class ProductModel: NSObject, NSCopying {
     var id : Int?
     var amount: Int?
     var name : String?
+    var details : String?
+
     var imagePath: String?
     var image: UIImage?
     var subCategory: String?
@@ -25,7 +27,7 @@ class ProductModel: NSObject, NSCopying {
         
     }
     
-    init(id: Int, amount: Int, name: String, imagePath: String, subCategory: String, category:String, price:Int, count:Int) {
+    init(id: Int, amount: Int, name: String, imagePath: String, subCategory: String, category:String, price:Int, count:Int, details:String, image: UIImage) {
         self.id = id
         self.name = name
         self.imagePath = imagePath
@@ -34,6 +36,8 @@ class ProductModel: NSObject, NSCopying {
         self.price = price
         self.amount = amount
         self.count = count
+        self.details = details
+        self.image = image
         
     }
     func checkForOrder(_ otherProduct: ProductModel, _ order: ComparisonResult) -> Bool {
@@ -45,7 +49,7 @@ class ProductModel: NSObject, NSCopying {
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        let copy = ProductModel(id: id!, amount: amount!, name: name!, imagePath: imagePath!, subCategory: subCategory!, category: category!, price: price!, count: count!)
+        let copy = ProductModel(id: id!, amount: amount!, name: name!, imagePath: imagePath!, subCategory: subCategory!, category: category!, price: price!, count: count!, details: details!, image:image!)
         return copy
     }
     

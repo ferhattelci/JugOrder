@@ -79,6 +79,9 @@ class DataModel: NSObject, URLSessionDataDelegate{
                 product.category = category
                 product.subCategory = subcategory
                 product.price = Int(price)
+                product.details = ""
+                product.image = #imageLiteral(resourceName: "26289119_digital-image") // standard image
+                
                 //Standard value
                 product.count = 0
                 

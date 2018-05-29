@@ -41,7 +41,6 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         
         cell.productCategory.text = product.category
-        cell.productDetails.text = "Details"
         cell.productName.text = product.name
         cell.productPrice.text = String(product.price!) + " €"
         cell.productAmount.text = String(product.count!)
@@ -65,17 +64,41 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
         let buttonPosition:CGPoint = (sender as AnyObject).convert(.zero, to: self.collectionView)
         let indexPath:IndexPath = self.collectionView.indexPathForItem(at: buttonPosition)!
         let productA = arrayOfProducts[indexPath.row]
-        let productB = productA.copy() as! ProductModel
         
-        if (productB.count! > 0){
-            orderedProducts.append(productB)
+        if (productA.count! > 0){
+            let productB = productA.copy() as! ProductModel
+
+            let alert = UIAlertController(title: "Details?", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "abbrechen", style: .cancel, handler: nil))
             
-            if let tabItems = self.tabBarController?.tabBar.items as NSArray?
-            {
-                // In this case we want to modify the badge number of the third tab:
-                let tabItem = tabItems[0] as! UITabBarItem
-                tabItem.badgeValue = String(orderedProducts.count)
-            }
+            alert.addTextField(configurationHandler: { textField in
+                textField.placeholder = "Details ..."
+            })
+            
+            alert.addAction(UIAlertAction(title: "hinzufügen", style: .default, handler: { action in
+                
+                if let name = alert.textFields?.first?.text {
+                    productB.details = name
+                    orderedProducts.append(productB)
+
+                    //reset to 0
+                    productA.count = 0
+                    UIView.performWithoutAnimation {
+                        self.collectionView.reloadItems(at:[indexPath])
+                    }
+                    
+                    if let tabItems = self.tabBarController?.tabBar.items as NSArray?
+                    {
+                        // In this case we want to modify the badge number of the third tab:
+                        let tabItem = tabItems[0] as! UITabBarItem
+                        tabItem.badgeValue = String(orderedProducts.count)
+                    }
+                }
+            }))
+            
+            self.present(alert, animated: true)
+
+           
         } else {
             //Give a dialog out to show a dialog
             let alert = UIAlertController(title: "Menge angeben", message: "Bitte gebe die Menge durch den Schieberegler ein.", preferredStyle: .alert)
@@ -85,11 +108,7 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.present(alert, animated: true)
         }
         
-        //reset to 0
-        productA.count = 0
-        UIView.performWithoutAnimation {
-            self.collectionView.reloadItems(at:[indexPath])
-        }
+      
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }

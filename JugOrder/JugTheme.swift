@@ -24,4 +24,5 @@ import UIKit
 
 extension UIColor {
   static let jugRed = UIColor(red: 236.0/255.0, green: 63.0/255.0, blue: 94.0/255.0, alpha: 1.0)
+     static let jugWhite = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 }

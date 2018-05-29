@@ -21,7 +21,7 @@ class ItemsViewController: UIViewController, UISearchBarDelegate {
         //Setup Segment
         let segment: UISegmentedControl = UISegmentedControl(items: ["Alle", "Favoriten"])
         segment.sizeToFit()
-        segment.tintColor = .jugRed
+        segment.tintColor = .jugWhite
         segment.selectedSegmentIndex = 0;
         self.navigationItem.titleView = segment
         // Setup the Search Controller
