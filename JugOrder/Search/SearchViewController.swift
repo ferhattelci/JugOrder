@@ -18,6 +18,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     var isFiltering: Bool = false
     
 
+    @IBAction func closeVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true

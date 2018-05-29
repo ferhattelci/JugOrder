@@ -28,6 +28,8 @@
 		EBE9D62220BB89D80064C1BB /* JugTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62120BB89D80064C1BB /* JugTheme.swift */; };
 		EBE9D62420BCA8000064C1BB /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62320BCA8000064C1BB /* CategoryModel.swift */; };
 		EBE9D62620BCA87B0064C1BB /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62520BCA87B0064C1BB /* TableModel.swift */; };
+		EBE9D62920BD7DE70064C1BB /* HookahMixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62820BD7DE70064C1BB /* HookahMixViewController.swift */; };
+		EBE9D62B20BD7DF90064C1BB /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62A20BD7DF90064C1BB /* SectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		EBE9D62120BB89D80064C1BB /* JugTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JugTheme.swift; sourceTree = "<group>"; };
 		EBE9D62320BCA8000064C1BB /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		EBE9D62520BCA87B0064C1BB /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		EBE9D62820BD7DE70064C1BB /* HookahMixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HookahMixViewController.swift; sourceTree = "<group>"; };
+		EBE9D62A20BD7DF90064C1BB /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		EBE9D5F620BB171F0064C1BB /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				EBE9D62720BD7DD00064C1BB /* Hookah Mix */,
 				EBE9D61920BB365A0064C1BB /* Category */,
 				EBE9D61820BB364D0064C1BB /* Item */,
 				EBE9D60E20BB2A760064C1BB /* DrinkViewController.swift */,
@@ -158,6 +163,15 @@
 				EBE9D61220BB34A60064C1BB /* CategoryCollectionViewCell.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		EBE9D62720BD7DD00064C1BB /* Hookah Mix */ = {
+			isa = PBXGroup;
+			children = (
+				EBE9D62820BD7DE70064C1BB /* HookahMixViewController.swift */,
+				EBE9D62A20BD7DF90064C1BB /* SectionHeaderView.swift */,
+			);
+			path = "Hookah Mix";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +253,7 @@
 				EBE9D62420BCA8000064C1BB /* CategoryModel.swift in Sources */,
 				EBE9D60F20BB2A760064C1BB /* DrinkViewController.swift in Sources */,
 				EBE9D5FB20BB17790064C1BB /* CategoryViewController.swift in Sources */,
+				EBE9D62B20BD7DF90064C1BB /* SectionHeaderView.swift in Sources */,
 				EBE9D61E20BB61060064C1BB /* HookahViewController.swift in Sources */,
 				EBE9D62620BCA87B0064C1BB /* TableModel.swift in Sources */,
 				EB58441D206EB907007035E0 /* ViewController.swift in Sources */,
@@ -247,6 +262,7 @@
 				EBE9D60920BB1D530064C1BB /* DataModel.swift in Sources */,
 				EBE9D61720BB36410064C1BB /* ItemsViewController.swift in Sources */,
 				EB58441B206EB907007035E0 /* AppDelegate.swift in Sources */,
+				EBE9D62920BD7DE70064C1BB /* HookahMixViewController.swift in Sources */,
 				EBE9D62220BB89D80064C1BB /* JugTheme.swift in Sources */,
 				EBE9D5F820BB174E0064C1BB /* ItemViewController.swift in Sources */,
 				EBE9D61520BB35D50064C1BB /* ItemCollectionViewCell.swift in Sources */,

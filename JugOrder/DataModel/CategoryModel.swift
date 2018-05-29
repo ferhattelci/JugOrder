@@ -12,9 +12,11 @@ import UIKit
 
 class CategoryModel: NSObject {
     
+    var id: Int?
     var name : String?
     var imagePath: String?
     var image: UIImage?
+    
     
     override init() {
  

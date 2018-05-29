@@ -86,7 +86,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
-
+    @IBAction func takeOrder(_ sender: Any) {
+        //Bestellung durchgehen 
+        
+        
+        
+        
+        
+        
+        
+    }
+    
 }
 extension ViewController:TableViewCellDelegate {
     

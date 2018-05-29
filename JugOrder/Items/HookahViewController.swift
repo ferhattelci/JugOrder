@@ -36,6 +36,7 @@ class HookahViewController: UIViewController {
             let sortedKeys = values.sorted(by: { $0.key < $1.key })
             vc?.arrayOfCategories = sortedKeys
         }
+
     }
    
 }
