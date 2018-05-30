@@ -28,13 +28,16 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
     
     @IBAction func mixHookah(_ sender: Any) {
 
+        var costlyPrice = 0
         for i in 0 ..< collectionView.indexPathsForSelectedItems!.count {
             let indexPath = collectionView.indexPathsForSelectedItems![i]
             let key = Array(hookahCategories.keys)[indexPath.section]
             let products = hookahCategories[key]
             let product = products![indexPath.row]
+            if costlyPrice < product.price! {
+                costlyPrice = product.price!
+            }
             
-
             // determine which product is expensive
             // set this to the input dialog
             // set category
@@ -42,10 +45,13 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
         }
 
         
-        showInputDialog()
+        showInputDialog(price: costlyPrice)
     }
     
-    func showInputDialog() {
+    @IBAction func closeVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    func showInputDialog(price: Int) {
         //Creating UIAlertController and
         //Setting title and message for the alert dialog
         let alertController = UIAlertController(title: "Shisha Mix?", message: "Gebe einen Namen für deinen Mix ein", preferredStyle: .alert)
@@ -55,7 +61,9 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             
             //getting the input values from user
             let name = alertController.textFields?[0].text
-            let price = alertController.textFields?[1].text
+            let category = alertController.textFields?[1].text
+
+            let price = alertController.textFields?[2].text
             
            // self.labelMessage.text = "Name: " + name! + "Email: " + email!
             
@@ -70,7 +78,13 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             textField.placeholder = "Name eingeben"
         }
         alertController.addTextField { (textField) in
-            textField.placeholder = "Preis eingeben"
+            textField.placeholder = "Kategorie eingeben"
+        }
+        alertController.addTextField { (textField) in
+           // textField.placeholder = "Preis eingeben"
+            textField.text = String(price) + " €"
+            // textField.isEditing(false)
+            
         }
         
         //adding the action to dialogbox

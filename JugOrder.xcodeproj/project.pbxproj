@@ -30,6 +30,9 @@
 		EBE9D62620BCA87B0064C1BB /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62520BCA87B0064C1BB /* TableModel.swift */; };
 		EBE9D62920BD7DE70064C1BB /* HookahMixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62820BD7DE70064C1BB /* HookahMixViewController.swift */; };
 		EBE9D62B20BD7DF90064C1BB /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62A20BD7DF90064C1BB /* SectionHeaderView.swift */; };
+		EBE9D62D20BDBFE70064C1BB /* HookahModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62C20BDBFE70064C1BB /* HookahModel.swift */; };
+		EBE9D62F20BDCB020064C1BB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */; };
+		EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		EBE9D62520BCA87B0064C1BB /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		EBE9D62820BD7DE70064C1BB /* HookahMixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HookahMixViewController.swift; sourceTree = "<group>"; };
 		EBE9D62A20BD7DF90064C1BB /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		EBE9D62C20BDBFE70064C1BB /* HookahModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HookahModel.swift; sourceTree = "<group>"; };
+		EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		EB584419206EB907007035E0 /* JugOrder */ = {
 			isa = PBXGroup;
 			children = (
+				EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */,
 				EBE9D62120BB89D80064C1BB /* JugTheme.swift */,
 				EBE9D60320BB18030064C1BB /* DataModel */,
 				EBE9D60020BB17E20064C1BB /* Tables */,
@@ -132,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE9D60120BB17EE0064C1BB /* TableViewController.swift */,
+				EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 				EBE9D60820BB1D530064C1BB /* DataModel.swift */,
 				EBE9D62320BCA8000064C1BB /* CategoryModel.swift */,
 				EBE9D62520BCA87B0064C1BB /* TableModel.swift */,
+				EBE9D62C20BDBFE70064C1BB /* HookahModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -255,6 +264,7 @@
 				EBE9D5FB20BB17790064C1BB /* CategoryViewController.swift in Sources */,
 				EBE9D62B20BD7DF90064C1BB /* SectionHeaderView.swift in Sources */,
 				EBE9D61E20BB61060064C1BB /* HookahViewController.swift in Sources */,
+				EBE9D62D20BDBFE70064C1BB /* HookahModel.swift in Sources */,
 				EBE9D62620BCA87B0064C1BB /* TableModel.swift in Sources */,
 				EB58441D206EB907007035E0 /* ViewController.swift in Sources */,
 				EBE9D61320BB34A60064C1BB /* CategoryCollectionViewCell.swift in Sources */,
@@ -264,6 +274,8 @@
 				EB58441B206EB907007035E0 /* AppDelegate.swift in Sources */,
 				EBE9D62920BD7DE70064C1BB /* HookahMixViewController.swift in Sources */,
 				EBE9D62220BB89D80064C1BB /* JugTheme.swift in Sources */,
+				EBE9D62F20BDCB020064C1BB /* LaunchViewController.swift in Sources */,
+				EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */,
 				EBE9D5F820BB174E0064C1BB /* ItemViewController.swift in Sources */,
 				EBE9D61520BB35D50064C1BB /* ItemCollectionViewCell.swift in Sources */,
 			);

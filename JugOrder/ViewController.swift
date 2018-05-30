@@ -12,59 +12,23 @@ var orderedProducts : [ProductModel] = []
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var orderTable: UITableView!
+    var selectedTable = TableModel()
     
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            print("Deleted")
-            orderedProducts.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            
-            if let tabItems = self.tabBarController?.tabBar.items as NSArray?
-            {
-                // In this case we want to modify the badge number of the third tab:
-                let tabItem = tabItems[0] as! UITabBarItem
-                tabItem.badgeValue = String(orderedProducts.count)
-            }
-            
-            checkDataExist()
-        }
-    }
     @IBAction func closeVC(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orderedProducts.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewTableViewCell
-        let product = orderedProducts[indexPath.row]
-        cell.delegate = self
-
-        cell.productCategory.text = product.category
-        cell.productDetails.text = product.details
-        cell.productTitle.text = product.name
-        cell.productPrice.text = String(product.price!) + " €"
-        cell.productAmount.text = "Menge " + String(product.count!)
-        if product.image != nil{
-            cell.productImage.image = product.image!
-        }
-        
-        
-        return cell
-    }
     
-
-    @IBOutlet weak var orderTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = selectedTable.name!
         navigationController?.navigationBar.prefersLargeTitles = true
-
         // Do any additional setup after loading the view, typically from a nib.
         orderButton.layer.borderColor = UIColor.lightGray.cgColor
         orderButton.layer.borderWidth = 1
         orderButton.layer.cornerRadius = 10 // optional
+        
         
 
     }
@@ -88,13 +52,46 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBAction func takeOrder(_ sender: Any) {
         //Bestellung durchgehen 
+
+        
+    }
+    //MARK TABLE
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return orderedProducts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewTableViewCell
+        let product = orderedProducts[indexPath.row] 
+        cell.delegate = self
+        
+        cell.productCategory.text = product.category
+        cell.productDetails.text = product.details
+        cell.productTitle.text = product.name
+        cell.productPrice.text = String(product.price!) + " €"
+        cell.productAmount.text = "Menge " + String(product.count!)
+        if product.image != nil{
+            cell.productImage.image = product.image!
+        }
         
         
-        
-        
-        
-        
-        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            orderedProducts.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            if let tabItems = self.tabBarController?.tabBar.items as NSArray?
+            {
+                // In this case we want to modify the badge number of the third tab:
+                let tabItem = tabItems[0] as! UITabBarItem
+                tabItem.badgeValue = String(orderedProducts.count)
+            }
+            
+            checkDataExist()
+        }
     }
     
 }

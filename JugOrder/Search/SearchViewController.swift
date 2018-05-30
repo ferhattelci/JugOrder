@@ -29,11 +29,13 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Suche ..."
+        searchController.searchBar.tintColor = UIColor.white
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
         // Setup the Scope Bar
         searchController.searchBar.scopeButtonTitles = ["All", "Hookah", "Drinks", "Snacks"]
+        searchController.searchBar.barTintColor = UIColor.white
         searchController.searchBar.delegate = self
         
         //navigationController?.navigationBar.prefersLargeTitles = true
@@ -50,7 +52,34 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         collectionView.reloadData()
         
     }
-    
+
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        if (selectedScope == 0) {
+                //All
+            arrayOfProducts = allProducts
+        }
+        else if (selectedScope == 1) {
+            //Hookah
+            arrayOfProducts = allProducts
+
+            arrayOfProducts = arrayOfProducts.filter { $0.category == "Hookah" }
+
+        }
+        else if (selectedScope == 2 ) {
+            //Drinks
+            arrayOfProducts = allProducts
+            arrayOfProducts = arrayOfProducts.filter { $0.category == "Drinks" }
+
+        }
+        else if (selectedScope == 3){
+            arrayOfProducts = allProducts
+
+            arrayOfProducts = arrayOfProducts.filter { $0.category == "Snacks" }
+
+            //Snacks
+        }
+        collectionView.reloadData()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if isFiltering {

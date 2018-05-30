@@ -59,17 +59,6 @@ class ProductModel: NSObject, NSCopying {
         if let encoded = url_string.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
             let url = URL(string: encoded)
         {
-           /* let session = URLSession.shared
-            let task = session.dataTask(with: url) { (data, response, error) in
-                if data != nil {
-                    let loadedImage = UIImage(data: data!)
-                    if(loadedImage != nil){
-                        DispatchQueue.main.async {
-                            self.image = loadedImage!
-                        }
-                    }
-                }
-            }*/
             DispatchQueue.global().async { [weak self] in
                 if let data = try? Data(contentsOf: url) {
                     if let image = UIImage(data: data) {
