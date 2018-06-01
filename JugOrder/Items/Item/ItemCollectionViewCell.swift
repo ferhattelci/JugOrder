@@ -9,6 +9,7 @@
 import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var productDetail: UILabel!
     
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productName: UILabel!

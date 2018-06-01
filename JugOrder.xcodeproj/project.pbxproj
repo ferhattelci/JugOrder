@@ -33,6 +33,7 @@
 		EBE9D62D20BDBFE70064C1BB /* HookahModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62C20BDBFE70064C1BB /* HookahModel.swift */; };
 		EBE9D62F20BDCB020064C1BB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */; };
 		EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */; };
+		EBE9D63320C021E20064C1BB /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63220C021E20064C1BB /* RestAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		EBE9D62C20BDBFE70064C1BB /* HookahModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HookahModel.swift; sourceTree = "<group>"; };
 		EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
+		EBE9D63220C021E20064C1BB /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				EBE9D62320BCA8000064C1BB /* CategoryModel.swift */,
 				EBE9D62520BCA87B0064C1BB /* TableModel.swift */,
 				EBE9D62C20BDBFE70064C1BB /* HookahModel.swift */,
+				EBE9D63220C021E20064C1BB /* RestAPIManager.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				EBE9D62B20BD7DF90064C1BB /* SectionHeaderView.swift in Sources */,
 				EBE9D61E20BB61060064C1BB /* HookahViewController.swift in Sources */,
 				EBE9D62D20BDBFE70064C1BB /* HookahModel.swift in Sources */,
+				EBE9D63320C021E20064C1BB /* RestAPIManager.swift in Sources */,
 				EBE9D62620BCA87B0064C1BB /* TableModel.swift in Sources */,
 				EB58441D206EB907007035E0 /* ViewController.swift in Sources */,
 				EBE9D61320BB34A60064C1BB /* CategoryCollectionViewCell.swift in Sources */,

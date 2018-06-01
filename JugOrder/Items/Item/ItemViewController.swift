@@ -38,11 +38,16 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ItemCollectionViewCell
         let product = arrayOfProducts[indexPath.row]
-        
-        
+
         cell.productCategory.text = product.category
         cell.productName.text = product.name
-        cell.productPrice.text = String(product.price!) + " €"
+        //MARK: be dynamic formats number to the €,$ as soo on
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .currency
+        if let formattedTipAmount = formatter.string(from: product.price! as NSNumber) {
+             cell.productPrice.text = formattedTipAmount
+        }
         cell.productAmount.text = String(product.count!)
         if (product.image != nil) {
             cell.productImage.image = product.image!
@@ -52,6 +57,7 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.amountSlider.addTarget(self, action: #selector(sliderValueChanged), for: UIControlEvents.valueChanged)
         cell.amountSlider.value = Float(product.count!)
 
+        cell.productDetail.text = product.details!
         // add a border
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 1

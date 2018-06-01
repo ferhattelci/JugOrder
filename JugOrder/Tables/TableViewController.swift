@@ -13,7 +13,7 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedSegment = "EG"
     var selectedTable = TableModel()
-
+    var timer : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,25 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
 
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        
+     
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+       
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(self.updateCells),
+                                     userInfo: nil, repeats: true)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,13 +77,17 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TableCollectionViewCell
         
         //let product = Array(arrayOfCategories.keys)[indexPath.row]
-        let table = Tables[selectedSegment]
-        cell.tableName.text = table![indexPath.row].name
+        let tables = Tables[selectedSegment]
+        let table = tables![indexPath.row]
+        cell.tableName.text = table.name
         cell.tableImage.image = #imageLiteral(resourceName: "tableFree")
-        cell.tablePrice.text = "10,99 €"
-        cell.tableTimer.text = "00:20"
-        
-        
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .currency
+        if let formattedTipAmount = formatter.string(from: table.price! as NSNumber) {
+            cell.tablePrice.text = formattedTipAmount
+        }       
+
         // add a border
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 1
@@ -74,7 +96,36 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         return cell
     }
+   @objc func updateCells() {
+    
+        let date = Date()
+        let releaseDateFormatter = DateFormatter()
+        releaseDateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        var releaseDate = Date()
 
+        let indexPathsArray = collectionView.indexPathsForVisibleItems
+        for indexPath in indexPathsArray {
+            let cell = collectionView.cellForItem(at: indexPath) as! TableCollectionViewCell
+            let tables = Tables[selectedSegment]
+            releaseDate = releaseDateFormatter.date(from: tables![indexPath.row].orderedDate!)!
+
+            let components = Set<Calendar.Component>([.second, .minute, .hour, .day, .month, .year])
+            let differenceOfDate = Calendar.current.dateComponents(components, from: releaseDate, to: date)
+
+            let hours = differenceOfDate.hour
+            let minutes = differenceOfDate.minute
+            let seconds = differenceOfDate.second
+            
+            var newValue = ""
+            if hours! > 0 {
+                newValue = String(format: "%02d:%02d:%02d", hours!, minutes!, seconds!)
+            } else {
+                newValue = String(format: "%02d:%02d", minutes!, seconds!)
+            }
+
+            cell.tableTimer.text = newValue
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "orderSegue") {
@@ -94,3 +145,4 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
 
 
 }
+

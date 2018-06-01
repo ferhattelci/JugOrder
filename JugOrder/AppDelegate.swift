@@ -9,9 +9,9 @@
 import UIKit
 
 var Products: [String : [String : [ProductModel]]] = [:]
-var Config: [String : [String]] = [:]
 var Tables: [String : [TableModel]] = [:]
 var allProducts : [ProductModel] = []
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

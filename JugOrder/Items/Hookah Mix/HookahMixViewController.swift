@@ -29,6 +29,7 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBAction func mixHookah(_ sender: Any) {
 
         var costlyPrice = 0
+        var tabacco = [ProductModel]()
         for i in 0 ..< collectionView.indexPathsForSelectedItems!.count {
             let indexPath = collectionView.indexPathsForSelectedItems![i]
             let key = Array(hookahCategories.keys)[indexPath.section]
@@ -36,6 +37,7 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             let product = products![indexPath.row]
             if costlyPrice < product.price! {
                 costlyPrice = product.price!
+                tabacco.append(product)
             }
             
             // determine which product is expensive
@@ -45,13 +47,13 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
         }
 
         
-        showInputDialog(price: costlyPrice)
+        showInputDialog(price: costlyPrice, tabacco: tabacco)
     }
     
     @IBAction func closeVC(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    func showInputDialog(price: Int) {
+    func showInputDialog(price: Int, tabacco: [ProductModel]) {
         //Creating UIAlertController and
         //Setting title and message for the alert dialog
         let alertController = UIAlertController(title: "Shisha Mix?", message: "Gebe einen Namen für deinen Mix ein", preferredStyle: .alert)
@@ -62,10 +64,21 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             //getting the input values from user
             let name = alertController.textFields?[0].text
             let category = alertController.textFields?[1].text
-
             let price = alertController.textFields?[2].text
             
-           // self.labelMessage.text = "Name: " + name! + "Email: " + email!
+            let hookah = HookahModel()
+        
+            hookah.id = 0
+            hookah.name = name
+            hookah.price = Int(price!)
+            hookah.subCategory = category
+            hookah.category = "Hookah"
+            hookah.amount = 20
+            hookah.count = 0
+            hookah.details = ""
+            hookah.tabak = tabacco
+            
+          //  hookah.addShishaToDB()
             
         }
         
@@ -82,7 +95,7 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         alertController.addTextField { (textField) in
            // textField.placeholder = "Preis eingeben"
-            textField.text = String(price) + " €"
+            textField.text = String(price)
             // textField.isEditing(false)
             
         }
