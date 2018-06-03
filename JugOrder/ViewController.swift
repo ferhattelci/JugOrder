@@ -71,14 +71,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 OrderModel.createOrderItems(pOrderID: String(order.id!), pProducts: orderedProducts["aktuelle Bestellung"]!)
             }
             
-            self.timedNotifications(selectedTable: self.selectedTable, inSeconds: 600) { (success) in
+            self.timedNotifications(selectedTable: self.selectedTable, inSeconds: 30) { (success) in
                 if (success) {
                     print("Erfolgreich")
                 }
             }
             
-            orderedProducts["ausstehende Bestellung"] = orderedProducts["aktuelle Bestellung"]
+            var newArray = [ProductModel]()
+            newArray = orderedProducts["aktuelle Bestellung"]!
+            newArray = newArray + orderedProducts["ausstehende Bestellung"]!
 
+            
+            orderedProducts["ausstehende Bestellung"] = newArray
+            orderedProducts["aktuelle Bestellung"]?.removeAll()
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.checkDataExist()
+
+            }
         }
     }
     

@@ -87,7 +87,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EUm-Bi-w4S"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tische" id="geS-JA-oCv"/>
+                    <navigationItem key="navigationItem" title="Tische" id="geS-JA-oCv">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-exit-25" id="MRq-Yu-Zpf">
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="OIO-PN-UGl" id="3CI-to-xxI"/>
                     </connections>
@@ -116,25 +120,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="by3-SI-7Ys">
-                                                    <rect key="frame" x="327" y="3" width="33" height="18"/>
+                                                    <rect key="frame" x="327" y="5" width="33" height="18"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcK-Zm-Rur">
-                                                    <rect key="frame" x="87" y="3" width="192" height="30"/>
+                                                    <rect key="frame" x="87" y="5" width="192" height="30"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="true-passion-tabak-200g-dose-cinderella-tk104778_0" translatesAutoresizingMaskIntoConstraints="NO" id="Sbc-Au-0Ed">
-                                                    <rect key="frame" x="4" y="0.0" width="75" height="93"/>
+                                                    <rect key="frame" x="5" y="5" width="75" height="93"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="gsA-7l-VPf"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Labe Label LAbel Label Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-b2-bZ7">
-                                                    <rect key="frame" x="87" y="22" width="192" height="49"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-b2-bZ7">
+                                                    <rect key="frame" x="87" y="22" width="192" height="50.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -156,20 +160,20 @@
                                                 <constraint firstAttribute="trailing" secondItem="by3-SI-7Ys" secondAttribute="trailing" constant="15" id="0Fh-OS-AXo"/>
                                                 <constraint firstItem="07B-SS-6zU" firstAttribute="bottom" secondItem="2ZW-p9-bh7" secondAttribute="bottomMargin" id="1Zx-Bh-fUz"/>
                                                 <constraint firstItem="NcK-Zm-Rur" firstAttribute="centerY" secondItem="by3-SI-7Ys" secondAttribute="centerY" constant="6" id="4ki-yM-0OW"/>
-                                                <constraint firstItem="by3-SI-7Ys" firstAttribute="top" secondItem="2ZW-p9-bh7" secondAttribute="topMargin" constant="-8" id="D9u-Rh-4Vh"/>
-                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="top" secondItem="2ZW-p9-bh7" secondAttribute="top" id="EjA-MK-uHT"/>
-                                                <constraint firstItem="NcK-Zm-Rur" firstAttribute="leading" secondItem="Sbc-Au-0Ed" secondAttribute="trailing" constant="8" symbolic="YES" id="Eno-S6-BjW"/>
+                                                <constraint firstItem="by3-SI-7Ys" firstAttribute="top" secondItem="2ZW-p9-bh7" secondAttribute="topMargin" constant="-6" id="D9u-Rh-4Vh"/>
+                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="top" secondItem="2ZW-p9-bh7" secondAttribute="top" constant="5" id="EjA-MK-uHT"/>
+                                                <constraint firstItem="NcK-Zm-Rur" firstAttribute="leading" secondItem="Sbc-Au-0Ed" secondAttribute="trailing" constant="7" id="Eno-S6-BjW"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="VfR-b2-bZ7" secondAttribute="trailing" constant="81" id="GWY-Jy-67X"/>
                                                 <constraint firstItem="NcK-Zm-Rur" firstAttribute="leading" secondItem="VfR-b2-bZ7" secondAttribute="leading" id="OHS-cT-7fH"/>
-                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="leading" secondItem="2ZW-p9-bh7" secondAttribute="leadingMargin" constant="-11" id="TY3-YZ-vK6"/>
+                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="leading" secondItem="2ZW-p9-bh7" secondAttribute="leadingMargin" constant="-10" id="TY3-YZ-vK6"/>
                                                 <constraint firstAttribute="trailing" secondItem="07B-SS-6zU" secondAttribute="trailing" constant="8" id="Tu2-U9-TAT"/>
                                                 <constraint firstItem="VfR-b2-bZ7" firstAttribute="trailing" secondItem="M1C-nm-kMy" secondAttribute="trailing" id="UL7-xI-Ygp"/>
-                                                <constraint firstItem="M1C-nm-kMy" firstAttribute="top" secondItem="NcK-Zm-Rur" secondAttribute="bottom" constant="37" id="bR2-uU-ET7"/>
-                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="centerY" secondItem="VfR-b2-bZ7" secondAttribute="centerY" id="bl2-jM-ELZ"/>
+                                                <constraint firstItem="M1C-nm-kMy" firstAttribute="top" secondItem="NcK-Zm-Rur" secondAttribute="bottom" constant="35" id="bR2-uU-ET7"/>
+                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="centerY" secondItem="VfR-b2-bZ7" secondAttribute="centerY" constant="4.25" id="bl2-jM-ELZ"/>
                                                 <constraint firstItem="VfR-b2-bZ7" firstAttribute="leading" secondItem="M1C-nm-kMy" secondAttribute="leading" id="dR4-W3-VP5"/>
                                                 <constraint firstItem="by3-SI-7Ys" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NcK-Zm-Rur" secondAttribute="trailing" constant="8" symbolic="YES" id="gmV-sj-DYC"/>
-                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="centerY" secondItem="2ZW-p9-bh7" secondAttribute="centerY" id="gtE-7M-CBK"/>
-                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="top" secondItem="NcK-Zm-Rur" secondAttribute="top" constant="-3" id="jDK-He-593"/>
+                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="centerY" secondItem="2ZW-p9-bh7" secondAttribute="centerY" constant="4.25" id="gtE-7M-CBK"/>
+                                                <constraint firstItem="Sbc-Au-0Ed" firstAttribute="top" secondItem="NcK-Zm-Rur" secondAttribute="top" id="jDK-He-593"/>
                                                 <constraint firstItem="VfR-b2-bZ7" firstAttribute="top" secondItem="2ZW-p9-bh7" secondAttribute="topMargin" constant="11" id="oPm-3J-CWl"/>
                                                 <constraint firstItem="NcK-Zm-Rur" firstAttribute="trailing" secondItem="VfR-b2-bZ7" secondAttribute="trailing" id="rGV-VW-se2"/>
                                                 <constraint firstItem="07B-SS-6zU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M1C-nm-kMy" secondAttribute="trailing" constant="8" symbolic="YES" id="tlm-wa-Rax"/>
@@ -193,10 +197,10 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-Lz-ex4">
                                 <rect key="frame" x="16" y="571" width="343" height="37"/>
-                                <color key="backgroundColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="bestellen">
-                                    <color key="titleColor" red="0.90196078430000004" green="0.93725490199999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="takeOrder:" destination="0HC-9R-GBv" eventType="touchUpInside" id="yAD-pz-mK3"/>
@@ -220,7 +224,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bestellungen" id="Gec-Gt-bvO">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="AYW-8e-4LA">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="closeVC:" destination="0HC-9R-GBv" id="Esr-mx-JIg"/>
                             </connections>
@@ -252,7 +256,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="3YH-ZA-4Gb"/>
                                 </constraints>
-                                <color key="color" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="color" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -284,8 +288,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="selectedImageTintColor" red="0.90196078430000004" green="0.93725490199999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.25098039215686274" green="0.25490196078431371" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="y1S-qA-fac" kind="relationship" relationship="viewControllers" id="MRv-4w-i2B"/>
@@ -311,13 +315,13 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -383,7 +387,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOg-6Q-OxT">
                                                     <rect key="frame" x="104" y="167" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="icons8-plus-90-2"/>
+                                                    <state key="normal" image="icons8-plus-filled-90"/>
                                                     <connections>
                                                         <action selector="addProduct:" destination="Lph-RV-6lq" eventType="touchUpInside" id="Ozx-cI-3cQ"/>
                                                         <action selector="addProduct:" destination="4Wr-hw-R1w" eventType="touchUpInside" id="ruL-sT-ioS"/>
@@ -424,7 +428,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Suche" id="zeQ-2Y-gZz">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="lxp-HH-cx3">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="closeVC:" destination="4Wr-hw-R1w" id="UQm-Vd-OAd"/>
                             </connections>
@@ -446,13 +450,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IH6-Po-GVK">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -476,13 +480,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3vc-qc-c06">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="lightTextColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.5450980392" green="0.35294117650000001" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -520,13 +524,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Hookah" id="RE2-cI-ew8">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="1AO-w9-koC">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="closeVC:" destination="HDR-PE-BMV" id="Fwc-sx-MCf"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Mix erstellen" id="HHm-jR-tmK">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="r4x-fa-ePu" kind="presentation" id="wSW-hJ-m7L"/>
                             </connections>
@@ -563,7 +567,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Drinks" id="tB2-Jh-0vp">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="2pz-Sr-VWZ">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="closeVC:" destination="9ma-Sg-80c" id="0Ic-sL-YVv"/>
                             </connections>
@@ -629,7 +633,7 @@
                                             <rect key="frame" x="10" y="10" width="357" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
-                                            <color key="textColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -655,7 +659,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Hookah Mix" id="wlQ-GO-fm8">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="OrX-8U-pGf">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="closeVC:" destination="Sid-3E-lPT" id="rI5-hj-CIy"/>
                             </connections>
@@ -675,6 +679,95 @@
             </objects>
             <point key="canvasLocation" x="670" y="2985"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="82P-ja-vzt">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Tf-fD-Pno" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WAt-tb-V6f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willkommen," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvl-Pw-t8g">
+                                <rect key="frame" x="47" y="160" width="257" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0sL-wC-cCC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="30"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="melden Sie sich an, um mit  Jug-Order fortzufahren." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gY-aM-imf">
+                                <rect key="frame" x="47" y="206" width="267" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="RsP-Mo-yWb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jug Order" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-uX-UVr">
+                                <rect key="frame" x="47" y="40" width="151" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="K8T-91-wST"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" placeholder="Personal Nr" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNC-8D-zAl">
+                                <rect key="frame" x="47" y="367" width="267" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test123" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nt-9j-9Yg">
+                                <rect key="frame" x="47" y="421" width="267" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-xN-pqF">
+                                <rect key="frame" x="47" y="546" width="80" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.setMasksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="xFW-jh-C6E" kind="presentation" id="Pcb-1O-4mr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LHY-Ay-Phs" firstAttribute="trailing" secondItem="uvl-Pw-t8g" secondAttribute="trailing" constant="71" id="Bc0-bG-V4l"/>
+                            <constraint firstItem="uvl-Pw-t8g" firstAttribute="top" secondItem="dHQ-uX-UVr" secondAttribute="bottom" constant="70" id="FPg-VW-oqp"/>
+                            <constraint firstItem="1gY-aM-imf" firstAttribute="leading" secondItem="LHY-Ay-Phs" secondAttribute="leading" constant="47" id="Hd9-bE-0af"/>
+                            <constraint firstItem="LHY-Ay-Phs" firstAttribute="trailing" secondItem="1gY-aM-imf" secondAttribute="trailing" constant="61" id="JNO-Rd-UzL"/>
+                            <constraint firstItem="uvl-Pw-t8g" firstAttribute="leading" secondItem="LHY-Ay-Phs" secondAttribute="leading" constant="47" id="KZb-fw-3TE"/>
+                            <constraint firstItem="dHQ-uX-UVr" firstAttribute="top" secondItem="LHY-Ay-Phs" secondAttribute="top" constant="20" id="LI8-Bg-JRr"/>
+                            <constraint firstItem="LHY-Ay-Phs" firstAttribute="trailing" secondItem="dHQ-uX-UVr" secondAttribute="trailing" constant="177" id="LKw-Qx-Z22"/>
+                            <constraint firstItem="dHQ-uX-UVr" firstAttribute="leading" secondItem="LHY-Ay-Phs" secondAttribute="leading" constant="47" id="Ob6-Ea-h3r"/>
+                            <constraint firstItem="1gY-aM-imf" firstAttribute="top" secondItem="dHQ-uX-UVr" secondAttribute="bottom" constant="116" id="pBr-D4-RdL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LHY-Ay-Phs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBI-bn-k3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="-1164"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="69i-WM-sLF">
             <objects>
@@ -686,13 +779,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="xf2-7L-xbY">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -811,13 +904,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XDR-xC-79G">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -855,7 +948,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Snacks" largeTitleDisplayMode="always" id="lLq-5S-dGm">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="gdk-KA-UxM">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="closeOrder:" destination="err-c3-AlL" id="uPb-Zn-2dv"/>
                             </connections>
@@ -877,13 +970,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JNd-IN-pke">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -903,13 +996,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OKY-uy-Jy9">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -993,7 +1086,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgH-z7-QhH">
                                                     <rect key="frame" x="104" y="167" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="icons8-plus-90-2"/>
+                                                    <state key="normal" image="icons8-plus-filled-90"/>
                                                     <connections>
                                                         <action selector="addProduct:" destination="Lph-RV-6lq" eventType="touchUpInside" id="OQr-id-TUP"/>
                                                     </connections>
@@ -1042,12 +1135,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="fwT-Ue-4N2">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1064,9 +1157,10 @@
         <image name="26289119_digital-image" width="1600" height="1600"/>
         <image name="Logo_final_neu" width="1266" height="790"/>
         <image name="dschinni-tobacco-da-bomb-200g-tk104502_0" width="1000" height="1000"/>
+        <image name="icons8-exit-25" width="25" height="25"/>
         <image name="icons8-hookah-filled-50" width="37" height="37"/>
         <image name="icons8-meal-filled-50" width="37" height="37"/>
-        <image name="icons8-plus-90-2" width="90" height="90"/>
+        <image name="icons8-plus-filled-90" width="90" height="90"/>
         <image name="icons8-purchase-order-filled-50" width="37" height="37"/>
         <image name="icons8-search-filled-50" width="37" height="37"/>
         <image name="icons8-soda-filled-50" width="37" height="37"/>

@@ -40,10 +40,6 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
                 tabacco.append(product)
             }
             
-            // determine which product is expensive
-            // set this to the input dialog
-            // set category
-            
         }
 
         
@@ -155,12 +151,16 @@ class myCollectionViewCell: UICollectionViewCell
             if self.isSelected
             {
                 super.isSelected = true
-                self.contentView.backgroundColor = .jugYellow
+                self.contentView.backgroundColor = .jugBlue
+                self.contentView.tintColor = .jugWhite
+
             }
             else
             {
                 super.isSelected = false
                 self.contentView.backgroundColor = .jugWhite
+                self.contentView.tintColor = UIColor.black
+
             }
         }
     }

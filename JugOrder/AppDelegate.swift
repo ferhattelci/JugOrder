@@ -10,6 +10,8 @@ import UIKit
 
 var Products: [String : [String : [ProductModel]]] = [:]
 var Tables: [String : [TableModel]] = [:]
+var images: [String : UIImage] = [:]
+
 var allProducts : [ProductModel] = []
 
 @UIApplicationMain
@@ -20,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
        
-        UISearchBar.appearance().tintColor = .jugWhite
-        UINavigationBar.appearance().tintColor = .jugWhite
+        UISearchBar.appearance().tintColor = .jugBlue
+        UINavigationBar.appearance().tintColor = .jugBlue
 
         return true
     }

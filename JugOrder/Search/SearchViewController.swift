@@ -29,7 +29,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Suche ..."
-        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.tintColor = .jugBlue
         navigationItem.searchController = searchController
         definesPresentationContext = true
         

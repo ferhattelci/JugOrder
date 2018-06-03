@@ -28,7 +28,7 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         let segment: UISegmentedControl = UISegmentedControl(items: ["EG", "Playroom", "OG"])
 
         segment.sizeToFit()
-        segment.tintColor = .jugWhite
+        segment.tintColor = .jugBlue
         segment.selectedSegmentIndex = 0;
         segment.addTarget(self, action: #selector(segmentedControlValueChanged), for: UIControlEvents.valueChanged)
         segment.addTarget(self, action: #selector(segmentedControlValueChanged), for: UIControlEvents.touchUpInside)
@@ -41,7 +41,7 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        refreshControl.tintColor = .jugYellow
+        refreshControl.tintColor = .jugBlue
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         collectionView.addSubview(refreshControl)
         collectionView.alwaysBounceVertical = true
