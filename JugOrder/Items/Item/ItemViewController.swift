@@ -84,8 +84,9 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
             alert.addAction(UIAlertAction(title: "hinzufügen", style: .default, handler: { action in
                 
                 if let name = alert.textFields?.first?.text {
-                    productB.details = name
-                    orderedProducts.append(productB)
+                   
+                    productB.details = productB.details! + " " + name
+                    orderedProducts["aktuelle Bestellung"]!.append(productB)
 
                     //reset to 0
                     productA.count = 0

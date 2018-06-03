@@ -13,16 +13,47 @@ import UIKit
 class RestAPIManager: NSObject {
     static let sharedInstance = RestAPIManager()
     
-    let baseURL = "http://qurnaz01.myftp.org/api/"
+    let baseURL = "http://192.168.23.178/api/"
     
-    func getTable(onCompletion: @escaping (NSDictionary) -> Void) {
+    //Mark Orders
+    func getOrder(id: String, onCompletion: @escaping (NSDictionary) -> Void) {
+        let route = baseURL + "order/read.php?id=" + id
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as NSDictionary)
+        })
+    }
+    func createOrder(body: String, onCompletion: @escaping (NSDictionary) -> Void) {
+        let route = baseURL + "order/create.php"
+       
+        makeHTTPPostRequest(path: route, body: body) { (json, err) in
+            onCompletion(json as NSDictionary)
+        }
+    }
+    
+    func createOrderItems(body:String, onCompletion: @escaping (NSDictionary) -> Void) {
+        let route = baseURL + "order/createOrderItems.php"
+        makeHTTPPostRequest(path: route, body: body) { (json, err) in
+            onCompletion(json as NSDictionary)
+        }
+    }
+    
+    //MARK Tables
+    func getTables(onCompletion: @escaping (NSDictionary) -> Void) {
         let route = baseURL + "table/load.php"
 
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as NSDictionary)
         })
     }
-    
+    func getTable(id: String, onCompletion: @escaping (NSDictionary) -> Void) {
+        let route = baseURL + "table/read.php?id=" + id
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as NSDictionary)
+        })
+    }
+    //Mark Products
     func getProducts(onCompletion: @escaping (NSDictionary) -> Void){
         let route = baseURL + "products/read.php"
         
@@ -60,28 +91,24 @@ class RestAPIManager: NSObject {
         task.resume()
     }
     
-    func makeHTTPPostRequest(path: String, body: [String: AnyObject], onCompletion: @escaping ServiceResponse) {
-        guard let url = URL(string: baseURL + path) else { return}
+    func makeHTTPPostRequest(path: String, body: String, onCompletion: @escaping ServiceResponse) {
+        guard let url = URL(string: path) else { return}
         var request = URLRequest.init(url: url)
-        
+
         // Set the method to POST
         request.httpMethod = "POST"
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
+
         // Set the POST body for the request
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
-
-        } catch let error {
-            print(error.localizedDescription)
-        }
-
+        request.httpBody = body.data(using: String.Encoding.utf8);
         
         let session = URLSession.shared
-        
-        let task = session.dataTask(with: url) { (data, response, error) in
+        let task = session.dataTask(with: request) { (data, response, error) in
+         
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! NSDictionary
-                    onCompletion(json, error!)
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
+                    onCompletion(json, error)
                     
                 } catch let error  {
                     print(error.localizedDescription)
@@ -92,4 +119,7 @@ class RestAPIManager: NSObject {
         }
         task.resume()
     }
+    
+   
+
 }

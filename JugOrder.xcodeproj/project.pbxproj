@@ -34,6 +34,7 @@
 		EBE9D62F20BDCB020064C1BB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */; };
 		EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */; };
 		EBE9D63320C021E20064C1BB /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63220C021E20064C1BB /* RestAPIManager.swift */; };
+		EBE9D63520C37A620064C1BB /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63420C37A610064C1BB /* OrderModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
 		EBE9D63220C021E20064C1BB /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
+		EBE9D63420C37A610064C1BB /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				EBE9D62520BCA87B0064C1BB /* TableModel.swift */,
 				EBE9D62C20BDBFE70064C1BB /* HookahModel.swift */,
 				EBE9D63220C021E20064C1BB /* RestAPIManager.swift */,
+				EBE9D63420C37A610064C1BB /* OrderModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				EBE9D62220BB89D80064C1BB /* JugTheme.swift in Sources */,
 				EBE9D62F20BDCB020064C1BB /* LaunchViewController.swift in Sources */,
 				EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */,
+				EBE9D63520C37A620064C1BB /* OrderModel.swift in Sources */,
 				EBE9D5F820BB174E0064C1BB /* ItemViewController.swift in Sources */,
 				EBE9D61520BB35D50064C1BB /* ItemCollectionViewCell.swift in Sources */,
 			);

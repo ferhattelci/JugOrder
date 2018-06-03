@@ -37,6 +37,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         searchController.searchBar.scopeButtonTitles = ["All", "Hookah", "Drinks", "Snacks"]
         searchController.searchBar.barTintColor = UIColor.white
         searchController.searchBar.delegate = self
+
+        let textFieldInsideSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = UIColor.white
+        textFieldInsideSearchBar?.tintColor = UIColor.white
+      
         
         //navigationController?.navigationBar.prefersLargeTitles = true
         arrayOfProducts = allProducts
@@ -134,7 +139,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
                 
                 if let name = alert.textFields?.first?.text {
                     productB.details = name
-                    orderedProducts.append(productB)
+                    orderedProducts["aktuelle Bestellung"]!.append(productB)
                     
                     //reset to 0
                     productA.count = 0
@@ -185,7 +190,13 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         
         cell.productCategory.text = product.category
         cell.productName.text = product.name
-        cell.productPrice.text = String(product.price!) + " €"
+        //MARK: be dynamic formats number to the €,$ as soo on
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .currency
+        if let formattedTipAmount = formatter.string(from: product.price! as NSNumber) {
+            cell.productPrice.text = formattedTipAmount
+        }
         cell.productAmount.text = String(product.count!)
         if (product.image != nil) {
             cell.productImage.image = product.image!

@@ -5,7 +5,7 @@
 //  Created by Ferhat Telci on 29.05.18.
 //  Copyright © 2018 Ferhat Telci. All rights reserved.
 //
-
+import UserNotifications
 import UIKit
 
 class LaunchViewController: UIViewController, HomeModelProtocol {
@@ -24,9 +24,16 @@ class LaunchViewController: UIViewController, HomeModelProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         let homeModel = DataModel()
-
         homeModel.delegate = self
         homeModel.downloadAllData()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
+            if error != nil {
+                print("unsuccess Auto")
+            } else {
+                print("success Auto")
+            }
+        }
+
         
         ProductModel.downloadProducts()
 
