@@ -99,6 +99,7 @@ class TableModel: NSObject {
                         let product = Products[0].copy() as! ProductModel
                         product.count = Int(quantity)
                         product.details = details
+                        product.Status = Int(status)
                         result.append(product)
                         
                     }

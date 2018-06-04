@@ -13,7 +13,33 @@ import UIKit
 class RestAPIManager: NSObject {
     static let sharedInstance = RestAPIManager()
     
-    let baseURL = "http://192.168.23.178/api/"
+    let baseURL = "http://qurnaz01.myftp.org/api/"
+    
+    
+    //Mark Hookah
+    func createHookah(body: String, onCompletion: @escaping (NSDictionary) -> Void) {
+        let route = baseURL + "products/createShisha.php"
+        
+        makeHTTPPostRequest(path: route, body: body) { (json, err) in
+            onCompletion(json as NSDictionary)
+        }
+    }
+    
+    func appendTabacoo(body: String, onCompletion: @escaping (NSDictionary) -> Void) {
+        let route = baseURL + "products/appendTobacco.php"
+        
+        makeHTTPPostRequest(path: route, body: body) { (json, err) in
+            onCompletion(json as NSDictionary)
+        }
+    }
+    
+    func createSubCategory(body: String, onCompletion: @escaping (NSDictionary) -> Void) {
+        let route = baseURL + "order/createShisha.php"
+        
+        makeHTTPPostRequest(path: route, body: body) { (json, err) in
+            onCompletion(json as NSDictionary)
+        }
+    }
     
     //Mark Orders
     func getOrder(id: String, onCompletion: @escaping (NSDictionary) -> Void) {
@@ -105,9 +131,12 @@ class RestAPIManager: NSObject {
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
          
+            if let response = response {
+                // print(response)
+            }
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! NSDictionary
                     onCompletion(json, error)
                     
                 } catch let error  {

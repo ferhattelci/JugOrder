@@ -13,10 +13,17 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionView: UICollectionView!
     var arrayOfProducts = [ProductModel]()
     let searchController = UISearchController(searchResultsController: nil)
+    let refreshControl = UIRefreshControl()
+    let category = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        arrayOfProducts = arrayOfProducts.sortProductByName(.orderedAscending) 
+        arrayOfProducts = arrayOfProducts.sortProductByName(.orderedAscending)
+        
+        refreshControl.tintColor = .jugBlue
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        collectionView.addSubview(refreshControl)
+        collectionView.alwaysBounceVertical = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +40,9 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.collectionView.reloadItems(at:[IndexPath.init(row: sender.tag, section: 0)])
         }
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+     
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -65,7 +75,11 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         return cell
     }
+    @objc func refresh(){
+        print("refresh")
 
+        refreshControl.endRefreshing()
+    }
     @IBAction func addProduct(_ sender: Any) {
         let buttonPosition:CGPoint = (sender as AnyObject).convert(.zero, to: self.collectionView)
         let indexPath:IndexPath = self.collectionView.indexPathForItem(at: buttonPosition)!
@@ -98,7 +112,7 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
                     {
                         // In this case we want to modify the badge number of the third tab:
                         let tabItem = tabItems[0] as! UITabBarItem
-                        tabItem.badgeValue = String(orderedProducts.count)
+                        tabItem.badgeValue = String(orderedProducts["aktuelle Bestellung"]!.count)
                     }
                 }
             }))

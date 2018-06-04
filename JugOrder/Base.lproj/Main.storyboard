@@ -90,6 +90,9 @@
                     <navigationItem key="navigationItem" title="Tische" id="geS-JA-oCv">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-exit-25" id="MRq-Yu-Zpf">
                             <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="3Tf-fD-Pno" kind="presentation" id="ViQ-oe-FRl"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -155,6 +158,10 @@
                                                     <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-checkmark-48" translatesAutoresizingMaskIntoConstraints="NO" id="3gY-eR-vW8">
+                                                    <rect key="frame" x="335" y="35" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="by3-SI-7Ys" secondAttribute="trailing" constant="15" id="0Fh-OS-AXo"/>
@@ -183,6 +190,7 @@
                                             <outlet property="productAmount" destination="07B-SS-6zU" id="sgq-Ol-ncF"/>
                                             <outlet property="productCategory" destination="NcK-Zm-Rur" id="7HD-AY-H1b"/>
                                             <outlet property="productDetails" destination="M1C-nm-kMy" id="0To-gi-StD"/>
+                                            <outlet property="productFinished" destination="3gY-eR-vW8" id="7r2-KJ-F6y"/>
                                             <outlet property="productImage" destination="Sbc-Au-0Ed" id="v5X-Vx-3JF"/>
                                             <outlet property="productPrice" destination="by3-SI-7Ys" id="kAt-ko-r7j"/>
                                             <outlet property="productTitle" destination="VfR-b2-bZ7" id="g2j-Cy-171"/>
@@ -472,7 +480,7 @@
         <scene sceneID="s3a-qj-t8J">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y1S-qA-fac" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-purchase-order-filled-50" id="nfP-UQ-8D3">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-purchase-order-50" id="nfP-UQ-8D3">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                         <color key="badgeColor" red="0.92549019610000005" green="0.2470588235" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -483,7 +491,7 @@
                         <color key="barTintColor" cocoaTouchSystemColor="lightTextColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.5450980392" green="0.35294117650000001" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -536,6 +544,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="hookahView" destination="kuC-41-X3W" id="2vf-Ru-yTy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K67-Rs-HpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -665,7 +676,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="3lr-qc-aYG">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="mixHookah:" destination="Sid-3E-lPT" id="5jl-8U-tQf"/>
                             </connections>
@@ -1157,16 +1168,18 @@
         <image name="26289119_digital-image" width="1600" height="1600"/>
         <image name="Logo_final_neu" width="1266" height="790"/>
         <image name="dschinni-tobacco-da-bomb-200g-tk104502_0" width="1000" height="1000"/>
+        <image name="icons8-checkmark-48" width="48" height="48"/>
         <image name="icons8-exit-25" width="25" height="25"/>
         <image name="icons8-hookah-filled-50" width="37" height="37"/>
         <image name="icons8-meal-filled-50" width="37" height="37"/>
         <image name="icons8-plus-filled-90" width="90" height="90"/>
-        <image name="icons8-purchase-order-filled-50" width="37" height="37"/>
+        <image name="icons8-purchase-order-50" width="37" height="37"/>
         <image name="icons8-search-filled-50" width="37" height="37"/>
         <image name="icons8-soda-filled-50" width="37" height="37"/>
         <image name="true-passion-tabak-200g-dose-cinderella-tk104778_0" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ViQ-oe-FRl"/>
         <segue reference="na7-jb-lnE"/>
     </inferredMetricsTieBreakers>
 </document>

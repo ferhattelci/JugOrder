@@ -151,7 +151,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
                     {
                         // In this case we want to modify the badge number of the third tab:
                         let tabItem = tabItems[0] as! UITabBarItem
-                        tabItem.badgeValue = String(orderedProducts.count)
+                        tabItem.badgeValue = String(orderedProducts["aktuelle Bestellung"]!.count)
                     }
                 }
             }))

@@ -13,6 +13,7 @@ class HookahViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var hookahView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -35,6 +36,7 @@ class HookahViewController: UIViewController {
 
             let sortedKeys = values.sorted(by: { $0.key < $1.key })
             vc?.arrayOfCategories = sortedKeys
+
         }
 
     }

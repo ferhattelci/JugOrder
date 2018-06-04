@@ -21,6 +21,7 @@ class ViewTableViewCell: UITableViewCell {
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productCategory: UILabel!
     @IBOutlet weak var productAmount: UILabel!
+    @IBOutlet weak var productFinished: UIImageView!
     
     private var tapCounter = 0
     var delegate: TableViewCellDelegate?

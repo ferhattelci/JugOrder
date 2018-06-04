@@ -51,11 +51,37 @@ class HookahModel : ProductModel {
             })
             
         }
-      
-    
-    
+
     }
     
+    func createHookah() {
+        
+        let body = "name="+self.name!+"&price="+String(self.price!)+"&imagePath="+String(self.imagePath!)+"&amount="+String(self.amount!)+"&category_id=3&subcategory_id=20"
+        //+String(self.subCategory!)
+        
+        RestAPIManager.sharedInstance.createHookah(body: body) { (json) in
+            if let records = json["records"] as? NSArray {
+                var jsonElement = NSDictionary()
+                jsonElement = records[0] as! NSDictionary
+                if let id = jsonElement["id"] as? String {
+                    self.id = Int(id)
+                    self.appendTabacco()
+                }
+            }
+        }
+    }
+    
+    func appendTabacco() {
+        var body = "HookahID="+String(self.id!)
+        for tabacco in self.tabak {
+            body = body + "&TobaccoID="+String(tabacco.id!)
+            RestAPIManager.sharedInstance.appendTabacoo(body: body) { (json) in
+                
+            }
+            
+        }
+        
+    }
     static func setHookahToTabacco(Config: [String: [String]]){
         let hookahItems = Products["Hookah"]
         
@@ -78,7 +104,6 @@ class HookahModel : ProductModel {
                 
                 mix = String(mix.dropLast())
                 hookah.details = String(mix.dropLast())
-        //        value[j] = hookah
             }
             
         }

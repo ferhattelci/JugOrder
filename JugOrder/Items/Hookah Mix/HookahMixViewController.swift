@@ -37,9 +37,9 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             let product = products![indexPath.row]
             if costlyPrice < product.price! {
                 costlyPrice = product.price!
-                tabacco.append(product)
             }
-            
+            tabacco.append(product)
+
         }
 
         
@@ -71,9 +71,22 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             hookah.category = "Hookah"
             hookah.amount = 20
             hookah.count = 0
-            hookah.details = ""
+            let tabaccos = tabacco.compactMap({ (product) -> String? in
+                return product.name!
+            })
+            hookah.details = tabaccos.joined(separator: ", ")
+     
+            hookah.image = #imageLiteral(resourceName: "26289119_digital-image")
             hookah.tabak = tabacco
+            hookah.imagePath = "blueHookah.png"
+            hookah.createHookah()
             
+            var hookahsC = Products["Hookah"]!
+            var hookahs = hookahsC["Erfrischend"]!
+            hookahs.append(hookah)
+            hookahsC.updateValue(hookahs, forKey: "Erfrischend")
+            Products.updateValue(hookahsC, forKey: "Hookah")
+            self.reset()
           //  hookah.addShishaToDB()
             
         }
@@ -104,6 +117,18 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func reset(){
+        let alert = UIAlertController(title: "Mix erstellt", message: "Dein Mix wurde erfolgreich erstellt.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
+        
+        for i in 0 ..< collectionView.indexPathsForSelectedItems!.count {
+            let indexPath = collectionView.indexPathsForSelectedItems![i]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCollectionViewCell
+            cell.isSelected = false
+        }
+        collectionView.reloadData()
+    }
     
     //MARK UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {

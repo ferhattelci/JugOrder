@@ -144,6 +144,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.productCategory.text = product.category
         cell.productDetails.text = product.details
+        cell.productFinished.isHidden = true
+
+        if product.Status != nil {
+            if product.Status! == product.count! {
+                cell.productFinished.isHidden = false
+            }
+        }
         cell.productTitle.text = product.name
         //MARK: be dynamic formats number to the €,$ as soo on
         let formatter = NumberFormatter()

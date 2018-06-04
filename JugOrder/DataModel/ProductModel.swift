@@ -22,6 +22,7 @@ class ProductModel: NSObject, NSCopying {
     var category: String?
     var price: Int?
     var count: Int?
+    var Status: Int?
     
     override init() {
         
@@ -55,7 +56,7 @@ class ProductModel: NSObject, NSCopying {
     
     func getImageFromURL(){
         
-        let url_string = "http://192.168.23.178/images/" + category! + "/" +  subCategory! + "/" + imagePath!
+        let url_string = "http://qurnaz01.myftp.org/images/" + category! + "/" +  subCategory! + "/" + imagePath!
         if let encoded = url_string.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
             let url = URL(string: encoded)
         {
