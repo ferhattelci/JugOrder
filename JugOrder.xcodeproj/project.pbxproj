@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB239B4A20C770C200F06FEC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB239B4920C770C200F06FEC /* UserModel.swift */; };
 		EB58441B206EB907007035E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB58441A206EB907007035E0 /* AppDelegate.swift */; };
 		EB58441D206EB907007035E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB58441C206EB907007035E0 /* ViewController.swift */; };
 		EB584420206EB907007035E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB58441E206EB907007035E0 /* Main.storyboard */; };
 		EB584422206EB907007035E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB584421206EB907007035E0 /* Assets.xcassets */; };
 		EB584425206EB907007035E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB584423206EB907007035E0 /* LaunchScreen.storyboard */; };
+		EB70B37720C955200090F987 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70B37620C955200090F987 /* LoadViewController.swift */; };
+		EB70B37920C95AFD0090F987 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70B37820C95AFD0090F987 /* DownloadService.swift */; };
+		EB70B37B20C95B1C0090F987 /* DownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70B37A20C95B1C0090F987 /* DownloadTask.swift */; };
+		EB70B37D20C95B320090F987 /* GenericDownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70B37C20C95B320090F987 /* GenericDownloadTask.swift */; };
+		EB70B37F20C95B430090F987 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70B37E20C95B430090F987 /* ResultType.swift */; };
 		EBE9D5F820BB174E0064C1BB /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D5F720BB174E0064C1BB /* ItemViewController.swift */; };
 		EBE9D5FB20BB17790064C1BB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D5FA20BB17790064C1BB /* CategoryViewController.swift */; };
 		EBE9D5FD20BB17B60064C1BB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D5FC20BB17B60064C1BB /* SearchViewController.swift */; };
@@ -35,9 +41,11 @@
 		EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */; };
 		EBE9D63320C021E20064C1BB /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63220C021E20064C1BB /* RestAPIManager.swift */; };
 		EBE9D63520C37A620064C1BB /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63420C37A610064C1BB /* OrderModel.swift */; };
+		EBE9D63720C70EEF0064C1BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63620C70EEF0064C1BB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB239B4920C770C200F06FEC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		EB584417206EB907007035E0 /* JugOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JugOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB58441A206EB907007035E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB58441C206EB907007035E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +53,11 @@
 		EB584421206EB907007035E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB584424206EB907007035E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB584426206EB907007035E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB70B37620C955200090F987 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		EB70B37820C95AFD0090F987 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		EB70B37A20C95B1C0090F987 /* DownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTask.swift; sourceTree = "<group>"; };
+		EB70B37C20C95B320090F987 /* GenericDownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDownloadTask.swift; sourceTree = "<group>"; };
+		EB70B37E20C95B430090F987 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		EBE9D5F720BB174E0064C1BB /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		EBE9D5FA20BB17790064C1BB /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		EBE9D5FC20BB17B60064C1BB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +81,7 @@
 		EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
 		EBE9D63220C021E20064C1BB /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		EBE9D63420C37A610064C1BB /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		EBE9D63620C70EEF0064C1BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +114,11 @@
 		EB584419206EB907007035E0 /* JugOrder */ = {
 			isa = PBXGroup;
 			children = (
+				EB70B38020C95EDA0090F987 /* DownloadTask */,
 				EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */,
+				EBE9D63620C70EEF0064C1BB /* LoginViewController.swift */,
 				EBE9D62120BB89D80064C1BB /* JugTheme.swift */,
+				EB70B37620C955200090F987 /* LoadViewController.swift */,
 				EBE9D60320BB18030064C1BB /* DataModel */,
 				EBE9D60020BB17E20064C1BB /* Tables */,
 				EBE9D5F920BB17670064C1BB /* Search */,
@@ -115,6 +132,17 @@
 				EB584426206EB907007035E0 /* Info.plist */,
 			);
 			path = JugOrder;
+			sourceTree = "<group>";
+		};
+		EB70B38020C95EDA0090F987 /* DownloadTask */ = {
+			isa = PBXGroup;
+			children = (
+				EB70B37820C95AFD0090F987 /* DownloadService.swift */,
+				EB70B37A20C95B1C0090F987 /* DownloadTask.swift */,
+				EB70B37C20C95B320090F987 /* GenericDownloadTask.swift */,
+				EB70B37E20C95B430090F987 /* ResultType.swift */,
+			);
+			path = DownloadTask;
 			sourceTree = "<group>";
 		};
 		EBE9D5F620BB171F0064C1BB /* Items */ = {
@@ -158,6 +186,7 @@
 				EBE9D62C20BDBFE70064C1BB /* HookahModel.swift */,
 				EBE9D63220C021E20064C1BB /* RestAPIManager.swift */,
 				EBE9D63420C37A610064C1BB /* OrderModel.swift */,
+				EB239B4920C770C200F06FEC /* UserModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -263,13 +292,17 @@
 			files = (
 				EBE9D62020BB69360064C1BB /* ViewTableViewCell.swift in Sources */,
 				EBE9D5FD20BB17B60064C1BB /* SearchViewController.swift in Sources */,
+				EB70B37920C95AFD0090F987 /* DownloadService.swift in Sources */,
+				EB70B37720C955200090F987 /* LoadViewController.swift in Sources */,
 				EBE9D60220BB17EE0064C1BB /* TableViewController.swift in Sources */,
 				EBE9D61B20BB462D0064C1BB /* SnackViewController.swift in Sources */,
 				EBE9D62420BCA8000064C1BB /* CategoryModel.swift in Sources */,
 				EBE9D60F20BB2A760064C1BB /* DrinkViewController.swift in Sources */,
 				EBE9D5FB20BB17790064C1BB /* CategoryViewController.swift in Sources */,
 				EBE9D62B20BD7DF90064C1BB /* SectionHeaderView.swift in Sources */,
+				EB70B37B20C95B1C0090F987 /* DownloadTask.swift in Sources */,
 				EBE9D61E20BB61060064C1BB /* HookahViewController.swift in Sources */,
+				EB70B37F20C95B430090F987 /* ResultType.swift in Sources */,
 				EBE9D62D20BDBFE70064C1BB /* HookahModel.swift in Sources */,
 				EBE9D63320C021E20064C1BB /* RestAPIManager.swift in Sources */,
 				EBE9D62620BCA87B0064C1BB /* TableModel.swift in Sources */,
@@ -277,6 +310,7 @@
 				EBE9D61320BB34A60064C1BB /* CategoryCollectionViewCell.swift in Sources */,
 				EBE9D60720BB1A9B0064C1BB /* ProductModel.swift in Sources */,
 				EBE9D60920BB1D530064C1BB /* DataModel.swift in Sources */,
+				EB239B4A20C770C200F06FEC /* UserModel.swift in Sources */,
 				EBE9D61720BB36410064C1BB /* ItemsViewController.swift in Sources */,
 				EB58441B206EB907007035E0 /* AppDelegate.swift in Sources */,
 				EBE9D62920BD7DE70064C1BB /* HookahMixViewController.swift in Sources */,
@@ -285,6 +319,8 @@
 				EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */,
 				EBE9D63520C37A620064C1BB /* OrderModel.swift in Sources */,
 				EBE9D5F820BB174E0064C1BB /* ItemViewController.swift in Sources */,
+				EBE9D63720C70EEF0064C1BB /* LoginViewController.swift in Sources */,
+				EB70B37D20C95B320090F987 /* GenericDownloadTask.swift in Sources */,
 				EBE9D61520BB35D50064C1BB /* ItemCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

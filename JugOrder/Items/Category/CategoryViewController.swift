@@ -11,7 +11,7 @@ import UIKit
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var arrayOfCategories = [(key: String, value: [ProductModel])]()
+    var arrayOfCategories = [(key: CategoryModel, value: [ProductModel])]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +34,10 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
 
         //let product = Array(arrayOfCategories.keys)[indexPath.row]
         let product = arrayOfCategories[indexPath.row]
-        cell.categoryName.text = product.key
-        
+        cell.categoryName.text = product.key.name!
+        if product.key.image != nil {
+            cell.categoryImage.image = product.key.image!
+        }
         // add a border
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 1

@@ -8,11 +8,10 @@
 
 import UIKit
 
-var Products: [String : [String : [ProductModel]]] = [:]
+var Products: [String : [CategoryModel : [ProductModel]]] = [:]
 var Tables: [String : [TableModel]] = [:]
-var images: [String : UIImage] = [:]
-
 var allProducts : [ProductModel] = []
+var activeUser = UserModel()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

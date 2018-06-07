@@ -13,9 +13,16 @@ import UIKit
 class RestAPIManager: NSObject {
     static let sharedInstance = RestAPIManager()
     
-    let baseURL = "http://qurnaz01.myftp.org/api/"
+    let baseURL = "http://192.168.23.178/api/"
     
-    
+    //User
+    func getUser(user: UserModel, onCompletion: @escaping (NSDictionary) -> Void){
+        let route = baseURL + "user/read.php?name=" + user.username + "&password=" + user.password
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as NSDictionary)
+        })
+    }
     //Mark Hookah
     func createHookah(body: String, onCompletion: @escaping (NSDictionary) -> Void) {
         let route = baseURL + "products/createShisha.php"

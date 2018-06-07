@@ -55,28 +55,20 @@ class ProductModel: NSObject, NSCopying {
     }
     
     func getImageFromURL(){
-        
-        let url_string = "http://qurnaz01.myftp.org/images/" + category! + "/" +  subCategory! + "/" + imagePath!
-        if let encoded = url_string.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
-            let url = URL(string: encoded)
-        {
-            DispatchQueue.global().async { [weak self] in
-                if let data = try? Data(contentsOf: url) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.image = image
-                        }
-                    }
-                }
-            }
+        let imageURL = "http://192.168.23.178/images/" + category! + "/" +  subCategory! + "/" + imagePath!
+
+        DispatchQueue.global().async { [weak self] in
+            let imageData: Data = try! Data(contentsOf: URL(string: imageURL)!)
+            self?.image = UIImage(data: imageData)!
+
         }
-   
     }
-    static func downloadProducts() {
+    
+    
+    static func downloadProducts(json: NSDictionary) {
         
-        RestAPIManager.sharedInstance.getProducts { (json) in
             var jsonElement = NSDictionary()
-            var result = [String: [String:[ProductModel]]]()
+            var result = [String: [CategoryModel:[ProductModel]]]()
             var result2 = [ProductModel]()
             
             var jsonResults = NSArray()
@@ -95,8 +87,13 @@ class ProductModel: NSObject, NSCopying {
                     let imagePath = jsonElement["imagePath"] as? String,
                     let category = jsonElement["CategoryName"] as? String,
                     let subcategory = jsonElement["subcategory_name"] as? String,
+                    let subcategoryImage = jsonElement["CategoryImage"] as? String,
                     let price = jsonElement["price"] as? String
                 {
+                    let subcategoryObj = CategoryModel()
+                    subcategoryObj.name = subcategory
+                    subcategoryObj.imagePath = subcategoryImage
+                    
                     product.id = Int(id)!
                     product.amount = Int(amount)!
                     product.name = name
@@ -110,21 +107,32 @@ class ProductModel: NSObject, NSCopying {
                     //Standard value
                     product.count = 0
                     
-                    if product.imagePath != nil || !imagePath.isEmpty{
+                    if product.imagePath != nil && imagePath != ""{
                         product.getImageFromURL()
                     }
                     
+                    if subcategoryObj.imagePath != nil && subcategoryImage != ""{
+                        subcategoryObj.getImageFromURL(category: category)
+                    }
                     
                     if var categoryExists = result[category]{
                         //category exist
-                        if var subcategoryExists = categoryExists[subcategory]{
+        
+                        var key = Array(categoryExists.keys)
+
+                        key = key.filter({$0.name == subcategoryObj.name && $0.imagePath == subcategoryObj.imagePath})
+                        var subcategoryExist = subcategoryObj
+                        
+                        if key.count > 0 {
+                             subcategoryExist = key[0]
+                        }
+                        
+                        if  var products = categoryExists[subcategoryExist]{
                             //subcategory exist
-                       
-                            subcategoryExists.append(product)
-                            
-                            categoryExists.updateValue(subcategoryExists, forKey: subcategory)
-                            //  result.updateValue(categoryExists, forKey: category)
-                            //result.updateValue(subcategoryExists, forKey: category)
+                            products.append(product)
+    
+                            categoryExists.updateValue(products, forKey: subcategoryExist)
+                           
                         }
                         else {
                             //subcategory not exist
@@ -132,7 +140,7 @@ class ProductModel: NSObject, NSCopying {
            
                             products.append(product)
                             
-                            categoryExists.updateValue(products, forKey: subcategory)
+                            categoryExists.updateValue(products, forKey: subcategoryObj)
                             
                         }
                         
@@ -146,7 +154,7 @@ class ProductModel: NSObject, NSCopying {
                         products.append(product)
                         
                         // products.append(product)
-                        result.updateValue([subcategory : products], forKey: category)
+                        result.updateValue([subcategoryObj : products], forKey: category)
                     }
                     
       
@@ -163,16 +171,18 @@ class ProductModel: NSObject, NSCopying {
             }
             
             DispatchQueue.main.async(execute: { () -> Void in
-                Products = result
-                allProducts = result2
-                HookahModel.downloadHookahMix()
+                 Products = result
+                 allProducts = result2
+                 HookahModel.downloadHookahMix()
+                 print("finish product download")
                 
             })
+
             
         }
 
         
-    }
+    
     
    
     

@@ -14,7 +14,7 @@ class LaunchViewController: UIViewController, HomeModelProtocol {
     func downloadedAllData() {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! UIViewController
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         
         UIApplication.shared.keyWindow?.rootViewController = viewController
         
@@ -35,17 +35,11 @@ class LaunchViewController: UIViewController, HomeModelProtocol {
         }
 
         
-        ProductModel.downloadProducts()
 
         
     }
 
-    func productsDownloaded(items: [String : [String : [ProductModel]]], allItems: [ProductModel]) {
-        Products = items
-        allProducts = allItems
-        
-      
-    }
+
 
     
 

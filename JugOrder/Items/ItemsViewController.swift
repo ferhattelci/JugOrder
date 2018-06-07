@@ -10,13 +10,13 @@ import UIKit
 
 class ItemsViewController: UIViewController, UISearchBarDelegate {
 
-    var category = String()
+    var category = CategoryModel()
     var arrayOfProducts = [ProductModel]()
     let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = category
+        self.title = category.name!
         navigationController?.navigationBar.prefersLargeTitles = true
         //Setup Segment
         let segment: UISegmentedControl = UISegmentedControl(items: ["Alle", "Favoriten"])

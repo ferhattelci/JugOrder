@@ -35,9 +35,9 @@ class DrinkViewController: UIViewController {
         if segue.destination is CategoryViewController
         {
             let vc = segue.destination as? CategoryViewController
-            let keys:[String: [ProductModel]] = Products["Drinks"]!
+            let keys:[CategoryModel: [ProductModel]] = Products["Drinks"]!
 
-            let sortedKeys = keys.sorted(by: { $0.key < $1.key })
+            let sortedKeys = keys.sorted(by: { $0.key.name! < $1.key.name! })
             vc?.arrayOfCategories = sortedKeys
         }
     }

@@ -32,9 +32,9 @@ class HookahViewController: UIViewController {
         if segue.destination is CategoryViewController
         {
             let vc = segue.destination as? CategoryViewController
-            let values:[String: [ProductModel]] = Products["Hookah"]!
+            let values:[CategoryModel: [ProductModel]] = Products["Hookah"]!
 
-            let sortedKeys = values.sorted(by: { $0.key < $1.key })
+            let sortedKeys = values.sorted(by: { $0.key.name! < $1.key.name! })
             vc?.arrayOfCategories = sortedKeys
 
         }

@@ -11,12 +11,18 @@ import UIKit
 class HookahMixViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     //var hookahCategories: [
-    var hookahCategories = Products["Tabak"]!
+   // var hookahCategories = Products["Tabak"]!
+    var hookahCategories = [(key: CategoryModel, value: [ProductModel])]()
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let hookah = Products["Tabak"]!
+        let sortedKeys = hookah.sorted(by: { $0.key.name! < $1.key.name! })
+        
+        hookahCategories = sortedKeys
 
     }
 
@@ -32,9 +38,11 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
         var tabacco = [ProductModel]()
         for i in 0 ..< collectionView.indexPathsForSelectedItems!.count {
             let indexPath = collectionView.indexPathsForSelectedItems![i]
-            let key = Array(hookahCategories.keys)[indexPath.section]
-            let products = hookahCategories[key]
-            let product = products![indexPath.row]
+            let key = hookahCategories[indexPath.section]
+            let product = key.value[indexPath.row]
+            //let key = Array(hookahCategories.keys)[indexPath.section]
+            //let products = hookahCategories[key]
+           // let product = products![indexPath.row]
             if costlyPrice < product.price! {
                 costlyPrice = product.price!
             }
@@ -81,11 +89,11 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             hookah.imagePath = "blueHookah.png"
             hookah.createHookah()
             
-            var hookahsC = Products["Hookah"]!
+            /*var hookahsC = Products["Hookah"]!
             var hookahs = hookahsC["Erfrischend"]!
             hookahs.append(hookah)
             hookahsC.updateValue(hookahs, forKey: "Erfrischend")
-            Products.updateValue(hookahsC, forKey: "Hookah")
+            Products.updateValue(hookahsC, forKey: "Hookah")*/
             self.reset()
           //  hookah.addShishaToDB()
             
@@ -133,21 +141,24 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
     //MARK UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         collectionView.allowsMultipleSelection = true
-        return hookahCategories.keys.count
+        return hookahCategories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    
-        let key = Array(hookahCategories.keys)[section]
-        return hookahCategories[key]!.count
+  
+        return hookahCategories[section].value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCollectionViewCell
 
-        let key = Array(hookahCategories.keys)[indexPath.section]
-        let product = hookahCategories[key]
-        cell.itemName.text = product![indexPath.row].name
+       // let key = Array(hookahCategories.keys)[indexPath.section]
+        let key = hookahCategories[indexPath.section]
+        let product = key.value[indexPath.row]
+        if key.key.image != nil {
+            cell.itemImage.image = key.key.image!
+        }
+        cell.itemName.text = product.name
         // add a border
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 1
@@ -160,8 +171,9 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeaderView", for: indexPath) as! SectionHeaderView
         
-        let category = Array(hookahCategories.keys)[indexPath.section]
-         sectionHeaderView.categoryTitle = category
+        let category = hookahCategories[indexPath.section]
+      //  let category = Array(hookahCategories.keys)[indexPath.section]
+        sectionHeaderView.categoryTitle = category.key.name
         
         return sectionHeaderView
     }
@@ -170,6 +182,7 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
 class myCollectionViewCell: UICollectionViewCell
 {
     
+    @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
     override var isSelected: Bool{
         didSet{

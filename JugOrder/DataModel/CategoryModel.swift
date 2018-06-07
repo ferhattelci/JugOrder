@@ -12,7 +12,6 @@ import UIKit
 
 class CategoryModel: NSObject {
     
-    var id: Int?
     var name : String?
     var imagePath: String?
     var image: UIImage?
@@ -22,5 +21,19 @@ class CategoryModel: NSObject {
  
     }
     
+    func getImageFromURL(category: String){
+        let imageURL = "http://192.168.23.178/images/" + category + "/" + imagePath!
+        
+        DispatchQueue.main.async(execute: { () -> Void in
+            do {
+                let imageData: Data = try Data(contentsOf: URL(string: imageURL)!)
+                self.image = UIImage(data: imageData)!
+            }
+            catch let error {
+                //print(error)
+            }
+        })
+      
+    }
     
 }
