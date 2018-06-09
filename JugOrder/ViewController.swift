@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //Bestellung durchgehen
         OrderModel.readOrder(table: String(selectedTable.id!)) { (order) in
             if (order.id == nil){
-                OrderModel.createOrder(table: String(self.selectedTable.id!), employee: "1", pproducts: orderedProducts["aktuelle Bestellung"]!)
+                OrderModel.createOrder(table: String(self.selectedTable.id!), employee: String(activeUser.id), pproducts: orderedProducts["aktuelle Bestellung"]!)
             } else {
                 OrderModel.createOrderItems(pOrderID: String(order.id!), pProducts: orderedProducts["aktuelle Bestellung"]!)
             }
@@ -101,8 +101,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let content = UNMutableNotificationContent()
         
-        content.title = selectedTable.name!
-        content.subtitle = "Letzte Bestellung vor 10 min."
+        content.title = ""
+        content.subtitle = ""
         content.body = "Die letzte Bestellung von " + selectedTable.name! + " ist 10 min her."
         
         let request = UNNotificationRequest.init(identifier: stringWithUUID(), content: content, trigger: trigger)

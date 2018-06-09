@@ -32,7 +32,13 @@ class HookahViewController: UIViewController {
         if segue.destination is CategoryViewController
         {
             let vc = segue.destination as? CategoryViewController
-            let values:[CategoryModel: [ProductModel]] = Products["Hookah"]!
+
+            var compare = Products["Hookah"]!
+            let compare2 = Products["Tabak"]!
+
+            compare.update(other: compare2)
+
+            let values:[CategoryModel: [ProductModel]] = compare
 
             let sortedKeys = values.sorted(by: { $0.key.name! < $1.key.name! })
             vc?.arrayOfCategories = sortedKeys
@@ -42,3 +48,11 @@ class HookahViewController: UIViewController {
     }
    
 }
+extension Dictionary {
+    mutating func update(other:Dictionary) {
+        for (key,value) in other {
+            self.updateValue(value, forKey:key)
+        }
+    }
+}
+

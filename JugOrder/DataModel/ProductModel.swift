@@ -55,11 +55,18 @@ class ProductModel: NSObject, NSCopying {
     }
     
     func getImageFromURL(){
-        let imageURL = "http://192.168.23.178/images/" + category! + "/" +  subCategory! + "/" + imagePath!
+        let imageURL = "http://192.168.23.178/images/" + category!  + "/" + imagePath!
 
         DispatchQueue.global().async { [weak self] in
-            let imageData: Data = try! Data(contentsOf: URL(string: imageURL)!)
-            self?.image = UIImage(data: imageData)!
+            do {
+                let imageData: Data = try Data(contentsOf: URL(string: imageURL)!)
+                self?.image = UIImage(data: imageData)!
+            } catch let error  {
+            
+                print(imageURL)
+                
+            }
+           
 
         }
     }

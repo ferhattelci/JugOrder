@@ -68,13 +68,13 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             //getting the input values from user
             let name = alertController.textFields?[0].text
             let category = alertController.textFields?[1].text
-            let price = alertController.textFields?[2].text
+
             
             let hookah = HookahModel()
         
             hookah.id = 0
             hookah.name = name
-            hookah.price = Int(price!)
+            hookah.price = Int(price)
             hookah.subCategory = category
             hookah.category = "Hookah"
             hookah.amount = 20
@@ -109,11 +109,17 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         alertController.addTextField { (textField) in
             textField.placeholder = "Kategorie eingeben"
+            textField.text = "Mix"
+            textField.isUserInteractionEnabled = false
         }
         alertController.addTextField { (textField) in
-           // textField.placeholder = "Preis eingeben"
-            textField.text = String(price)
-            // textField.isEditing(false)
+            let formatter = NumberFormatter()
+            formatter.locale = Locale.current
+            formatter.numberStyle = .currency
+            if let formattedTipAmount = formatter.string(from: price as NSNumber) {
+                textField.text = String(formattedTipAmount)
+            }
+            textField.isUserInteractionEnabled = false
             
         }
         
