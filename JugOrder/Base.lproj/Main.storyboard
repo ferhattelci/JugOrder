@@ -91,7 +91,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-exit-25" id="MRq-Yu-Zpf">
                             <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="3Tf-fD-Pno" kind="presentation" id="ViQ-oe-FRl"/>
+                                <segue destination="3Tf-fD-Pno" kind="presentation" identifier="segueLogout" id="ViQ-oe-FRl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -134,7 +134,7 @@
                                                     <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="true-passion-tabak-200g-dose-cinderella-tk104778_0" translatesAutoresizingMaskIntoConstraints="NO" id="Sbc-Au-0Ed">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-hide-50" translatesAutoresizingMaskIntoConstraints="NO" id="Sbc-Au-0Ed">
                                                     <rect key="frame" x="5" y="5" width="75" height="93"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="gsA-7l-VPf"/>
@@ -370,7 +370,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="26289119_digital-image" translatesAutoresizingMaskIntoConstraints="NO" id="jux-Q7-vzX">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-hide-50" translatesAutoresizingMaskIntoConstraints="NO" id="jux-Q7-vzX">
                                                     <rect key="frame" x="45" y="3" width="60" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -606,7 +606,7 @@
                                                     <color key="textColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dschinni-tobacco-da-bomb-200g-tk104502_0" translatesAutoresizingMaskIntoConstraints="NO" id="rco-NE-6gi">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-hide-50" translatesAutoresizingMaskIntoConstraints="NO" id="rco-NE-6gi">
                                                     <rect key="frame" x="20" y="8" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -884,7 +884,7 @@
                                                     <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dschinni-tobacco-da-bomb-200g-tk104502_0" translatesAutoresizingMaskIntoConstraints="NO" id="g7f-Zi-tW6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-hide-50" translatesAutoresizingMaskIntoConstraints="NO" id="g7f-Zi-tW6">
                                                     <rect key="frame" x="20" y="8" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1129,7 +1129,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="26289119_digital-image" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-mC-fW3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-hide-50" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-mC-fW3">
                                                     <rect key="frame" x="45" y="3" width="60" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1209,18 +1209,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="26289119_digital-image" width="1600" height="1600"/>
         <image name="Logo_final_neu" width="1266" height="790"/>
-        <image name="dschinni-tobacco-da-bomb-200g-tk104502_0" width="1000" height="1000"/>
         <image name="icons8-checkmark-48" width="48" height="48"/>
         <image name="icons8-exit-25" width="25" height="25"/>
+        <image name="icons8-hide-50" width="50" height="50"/>
         <image name="icons8-hookah-filled-50" width="37" height="37"/>
         <image name="icons8-meal-filled-50" width="37" height="37"/>
         <image name="icons8-plus-filled-90" width="90" height="90"/>
         <image name="icons8-purchase-order-50" width="37" height="37"/>
         <image name="icons8-search-filled-50" width="37" height="37"/>
         <image name="icons8-soda-filled-50" width="37" height="37"/>
-        <image name="true-passion-tabak-200g-dose-cinderella-tk104778_0" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="na7-jb-lnE"/>

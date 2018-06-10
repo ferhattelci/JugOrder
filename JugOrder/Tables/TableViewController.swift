@@ -11,7 +11,7 @@ import UIKit
 class TableViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, HomeModelProtocol {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var selectedSegment = "EG"
+    var selectedSegment = ""
     var selectedTable = TableModel()
     let refreshControl = UIRefreshControl()
 
@@ -25,8 +25,11 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         //Setup Segment
-        let segment: UISegmentedControl = UISegmentedControl(items: ["EG", "Playroom", "OG"])
-
+        let keys = Array(Tables.keys)
+        
+        let segment: UISegmentedControl = UISegmentedControl(items: keys)
+        selectedSegment = keys[0]
+        
         segment.sizeToFit()
         segment.tintColor = .jugBlue
         segment.selectedSegmentIndex = 0;
@@ -76,15 +79,9 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Dispose of any resources that can be recreated.
     }
     @objc func segmentedControlValueChanged(segment: UISegmentedControl){
-        if segment.selectedSegmentIndex == 0 {
-            selectedSegment = "EG"
-        }
-        else if segment.selectedSegmentIndex == 1 {
-            selectedSegment = "Playroom"
-        }
-        else if segment.selectedSegmentIndex == 2 {
-            selectedSegment = "OG"
-        }
+        let keys = Array(Tables.keys)
+
+        selectedSegment = keys[segment.selectedSegmentIndex]
         
         collectionView.reloadData()
     }
@@ -172,6 +169,9 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
             let key = Tables[selectedSegment]
             let table = key![indexPath.row]
             vc.selectedTable = table
+        }
+        else if (segue.identifier == "segueLogout") {
+            activeUser.createEndWork()
         }
     }
 

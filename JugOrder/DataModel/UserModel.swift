@@ -15,6 +15,11 @@ class UserModel: NSObject {
     var surname : String!
     var username: String!
     var password: String!
+    var start: String!
+    var end: String!
+    var trackID: Int!
+
+
     
     init(id: Int, name: String, surname: String, username: String!, password: String!) {
         self.id = id
@@ -47,5 +52,56 @@ class UserModel: NSObject {
             }
         }
     }
+    
+    func getStartWork(completion: @escaping (_ result: UserModel) -> Void){
+        RestAPIManager.sharedInstance.getTracker(user: self) { (json) in
+            if let records = json["records"] as? NSArray {
+                var jsonElement = NSDictionary()
+                jsonElement = records[0] as! NSDictionary
+                if let id = jsonElement["id"] as? String,
+                    let start = jsonElement["Start"] as? String,
+                    let end = jsonElement["End"] as? String
+                    
+                {
+                    self.trackID = Int(id)
+                    self.start = start
+                    self.end = end
+                    
+                }
+                completion(self)
+                
+            }
+        }
+    }
+    func createStartWork(){
+        getStartWork { (user) in
+            if user.trackID == nil {
+                let body = "EmployeeID="+String(self.id!)
+                RestAPIManager.sharedInstance.createStartWork(body: body, onCompletion: { (json) in
+                    if let records = json["records"] as? NSArray {
+                        var jsonElement = NSDictionary()
+                        jsonElement = records[0] as! NSDictionary
+                        if let id = jsonElement["id"] as? String
+                            
+                        {
+                            self.trackID = Int(id)
+                        }
+                    }
+                })
+            
+            }
+            
+        }
+       
+    }
+    
+    func createEndWork(){
+        if self.trackID != nil {
+            let body = "id="+String(self.trackID!)
+            RestAPIManager.sharedInstance.createEndWork(body: body)
+            
+        }
+    }
+    
     
 }

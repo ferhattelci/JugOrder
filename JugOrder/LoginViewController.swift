@@ -42,7 +42,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             if newUser.id != 0 && newUser.id != nil {
                 print("login success")
                 activeUser = newUser
-                
+                activeUser.createStartWork()
+
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let destinationNavigationController = storyboard.instantiateViewController(withIdentifier: "LoadViewController") as! LoadViewController
                 DispatchQueue.main.async {

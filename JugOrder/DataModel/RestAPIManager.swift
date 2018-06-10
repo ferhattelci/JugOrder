@@ -23,6 +23,26 @@ class RestAPIManager: NSObject {
             onCompletion(json as NSDictionary)
         })
     }
+    func getTracker(user: UserModel, onCompletion: @escaping (NSDictionary) -> Void){
+        let route = baseURL + "user/readTracking.php?employeeid=" + String(user.id!)
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as NSDictionary)
+        })
+    }
+
+    func createStartWork(body: String, onCompletion: @escaping(NSDictionary) ->Void) {
+        let route = baseURL + "user/createWork.php"
+        makeHTTPPostRequest(path: route, body: body) { (json, err) in
+            onCompletion(json as NSDictionary)
+        }
+    }
+    
+    func createEndWork(body: String) {
+        let route = baseURL + "user/updateWorker.php"
+        makeHTTPPostRequest(path: route, body: body) { (json, err) in
+        }
+    }
     //Mark Hookah
     func createHookah(body: String, onCompletion: @escaping (NSDictionary) -> Void) {
         let route = baseURL + "products/createShisha.php"
@@ -34,14 +54,6 @@ class RestAPIManager: NSObject {
     
     func appendTabacoo(body: String, onCompletion: @escaping (NSDictionary) -> Void) {
         let route = baseURL + "products/appendTobacco.php"
-        
-        makeHTTPPostRequest(path: route, body: body) { (json, err) in
-            onCompletion(json as NSDictionary)
-        }
-    }
-    
-    func createSubCategory(body: String, onCompletion: @escaping (NSDictionary) -> Void) {
-        let route = baseURL + "order/createShisha.php"
         
         makeHTTPPostRequest(path: route, body: body) { (json, err) in
             onCompletion(json as NSDictionary)
@@ -138,9 +150,6 @@ class RestAPIManager: NSObject {
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
          
-            if let response = response {
-                // print(response)
-            }
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! NSDictionary

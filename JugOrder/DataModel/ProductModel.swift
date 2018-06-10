@@ -55,20 +55,13 @@ class ProductModel: NSObject, NSCopying {
     }
     
     func getImageFromURL(){
-        let imageURL = "http://192.168.23.178/images/" + category!  + "/" + imagePath!
+        var imageName = String((imagePath?.dropLast())!)
+        imageName = String(String(imageName.dropLast()).dropLast())
+        imageName = String(imageName.dropLast())
+        
 
-        DispatchQueue.global().async { [weak self] in
-            do {
-                let imageData: Data = try Data(contentsOf: URL(string: imageURL)!)
-                self?.image = UIImage(data: imageData)!
-            } catch let error  {
-            
-                print(imageURL)
-                
-            }
-           
-
-        }
+        self.image = UIImage(named: imageName)
+     
     }
     
     
@@ -109,7 +102,7 @@ class ProductModel: NSObject, NSCopying {
                     product.subCategory = subcategory
                     product.price = Int(price)
                     product.details = ""
-                    product.image = #imageLiteral(resourceName: "26289119_digital-image") // standard image
+                    product.image = #imageLiteral(resourceName: "icons8-hide-50") // standard image
                     
                     //Standard value
                     product.count = 0
