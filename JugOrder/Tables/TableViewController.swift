@@ -13,7 +13,9 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedSegment = ""
     var selectedTable = TableModel()
+    var reBookOrder = OrderModel()
     let refreshControl = UIRefreshControl()
+    var reBook = false
 
     var timer : Timer?
     let homeModel = DataModel()
@@ -48,9 +50,18 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         collectionView.addSubview(refreshControl)
         collectionView.alwaysBounceVertical = true
+        
+        if reBook {
+            self.navigationItem.rightBarButtonItem?.image = UIImage.init(named: "transfer")
+            self.navigationItem.title = "Transfer"
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(closeVC))
+        }
 
     }
     
+    @objc func closeVC(){
+        dismiss(animated: true, completion: nil)
+    }
     @objc func refresh(){
         print("refresh")
         homeModel.downloadAllData()
@@ -65,35 +76,53 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
        
     }
     override func viewWillAppear(_ animated: Bool) {
-        timer = Timer.scheduledTimer(timeInterval: 1,
-                                     target: self,
-                                     selector: #selector(self.updateCells),
-                                     userInfo: nil, repeats: true)
-        homeModel.downloadAllData()
-
+        if !reBook {
+            timer = Timer.scheduledTimer(timeInterval: 1,
+                                         target: self,
+                                         selector: #selector(self.updateCells),
+                                         userInfo: nil, repeats: true)
+            homeModel.downloadAllData()
+        }
     }
 
+    @IBAction func rightBar(_ sender: Any) {
+        if reBook {
+            let indexPath = collectionView.indexPathsForSelectedItems?.first
+            let tables = Tables[selectedSegment]
+            let table = tables![(indexPath?.row)!]
+            reBookOrder.transferOrder(newTableID: String(table.id!) )
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationNavigationController = storyboard.instantiateViewController(withIdentifier: "TableNavigationController") as! UINavigationController
+            self.present(destinationNavigationController, animated: true, completion: nil)
+        } else {
+            activeUser.createEndWork()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.present(loginVC, animated: true, completion: nil)
 
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @objc func segmentedControlValueChanged(segment: UISegmentedControl){
         let keys = Array(Tables.keys)
-
         selectedSegment = keys[segment.selectedSegmentIndex]
-        
         collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if reBook {
+            collectionView.allowsSelection = true
+        }
         return (Tables[selectedSegment]?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TableCollectionViewCell
         
-        //let product = Array(arrayOfCategories.keys)[indexPath.row]
         let tables = Tables[selectedSegment]
         let table = tables![indexPath.row]
         cell.tableName.text = table.name
@@ -114,6 +143,10 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8 // optional
         
+        if reBook {
+            cell.tablePrice.isHidden = true
+            cell.tableTimer.isHidden = true
+        }
         
         return cell
     }
@@ -158,25 +191,22 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "orderSegue") {
-            let buttonPosition:CGPoint = (sender as AnyObject).convert(.zero, to: self.collectionView)
-            let indexPath:IndexPath = self.collectionView.indexPathForItem(at: buttonPosition)!
-            let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-            let navCtrl: UINavigationController = tabCtrl.viewControllers![0] as! UINavigationController
-            let vc = navCtrl.viewControllers[0] as! ViewController
-            
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if !reBook {
             let key = Tables[selectedSegment]
             let table = key![indexPath.row]
+          
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarController = storyBoard.instantiateViewController(withIdentifier: "rootTabBar") as! UITabBarController
+            let navigationController = tabBarController.viewControllers![0] as! UINavigationController
+            let vc = navigationController.viewControllers[0] as! ViewController
+            
             vc.selectedTable = table
-        }
-        else if (segue.identifier == "segueLogout") {
-            activeUser.createEndWork()
+            self.present(tabBarController, animated: true)
+
         }
     }
-
     
-
 
 }
 

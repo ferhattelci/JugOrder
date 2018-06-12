@@ -1,0 +1,16 @@
+PODS:
+  - NavBarDropdownMenu (0.5.0)
+
+DEPENDENCIES:
+  - NavBarDropdownMenu
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - NavBarDropdownMenu
+
+SPEC CHECKSUMS:
+  NavBarDropdownMenu: 70a5cb67b996f51d4bc7e4a5aaa09861408dcaeb
+
+PODFILE CHECKSUM: 314f569380e5c7432f9db4f5f765e06f055409e3
+
+COCOAPODS: 1.5.3

@@ -14,6 +14,23 @@ class TableCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tableTimer: UILabel!
     @IBOutlet weak var tableImage: UIImageView!
   
-    
+    override var isSelected: Bool{
+        didSet{
+            if self.isSelected
+            {
+                super.isSelected = true
+                self.contentView.backgroundColor = .jugBlue
+                self.contentView.tintColor = .jugWhite
+                
+            }
+            else
+            {
+                super.isSelected = false
+                self.contentView.backgroundColor = .jugWhite
+                self.contentView.tintColor = UIColor.black
+                
+            }
+        }
+    }
     
 }

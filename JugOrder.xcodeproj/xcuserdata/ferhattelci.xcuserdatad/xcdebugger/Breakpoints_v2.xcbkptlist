@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.755569"
+            timestampString = "550512793.507439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.75579"
+            timestampString = "550512793.507688"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
             landmarkName = "tableViewCell(singleTapActionDelegatedFrom:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.756116"
+            timestampString = "550512793.508245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "ViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.756333"
+            timestampString = "550512793.5087219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "unknown"
             landmarkType = "0">
             <Locations>
@@ -584,7 +584,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.078701"
+            timestampString = "550512793.509583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
@@ -600,7 +600,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.079589"
+            timestampString = "550512793.509653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "155"
@@ -648,7 +648,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.0796649"
+            timestampString = "550512793.509737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -792,7 +792,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.079758"
+            timestampString = "550512793.509871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -856,11 +856,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.756869"
+            timestampString = "550512793.509937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -872,11 +872,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.756914"
+            timestampString = "550512793.5100141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -888,11 +888,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.756955"
+            timestampString = "550512793.510084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -904,11 +904,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.756996"
+            timestampString = "550512793.510217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "closeVC(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -920,28 +920,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.757208"
+            timestampString = "550512793.510763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.757458"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1016,7 +1000,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.07988"
+            timestampString = "550512793.511194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -1080,11 +1064,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.757647"
+            timestampString = "550512793.511253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "makeHTTPGetRequest(path:onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1096,11 +1080,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.7577"
+            timestampString = "550512793.511297"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "makeHTTPGetRequest(path:onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1112,11 +1096,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.757741"
+            timestampString = "550512793.511333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "makeHTTPGetRequest(path:onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1192,7 +1176,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.757877"
+            timestampString = "550512793.511415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "172"
@@ -1400,11 +1384,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.758005"
+            timestampString = "550512793.511513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "updateCells()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1416,11 +1400,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.758051"
+            timestampString = "550512793.511569"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "updateCells()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1432,11 +1416,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.758104"
+            timestampString = "550512793.511622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "updateCells()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1496,11 +1480,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.758204"
+            timestampString = "550512793.511736"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "updateCells()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1512,11 +1496,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.758251"
+            timestampString = "550512793.511803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "updateCells()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1528,11 +1512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.758293"
+            timestampString = "550512793.511868"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "updateCells()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1544,11 +1528,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.758334"
+            timestampString = "550512793.511937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1566,86 +1550,6 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.758577"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "takeOrder(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JugOrder.ViewController.takeOrder(Any) -&gt; ()"
-                  moduleName = "JugOrder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ferhattelci/Documents/JugOrder/JugOrder/ViewController.swift"
-                  timestampString = "549652099.999705"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "309">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in JugOrder.ViewController.takeOrder(Any) -&gt; ()"
-                  moduleName = "JugOrder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ferhattelci/Documents/JugOrder/JugOrder/ViewController.swift"
-                  timestampString = "549652100.001875"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.758943"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "takeOrder(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.759164"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "takeOrder(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1704,11 +1608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.759416"
+            timestampString = "550512793.512421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "updateCells()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1720,11 +1624,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.759464"
+            timestampString = "550512793.5124789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -1768,11 +1672,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.759676"
+            timestampString = "550512793.512856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1784,11 +1688,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.7598979"
+            timestampString = "550512793.513222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "makeHTTPPostRequest(path:body:onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1800,23 +1704,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.759939"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "makeHTTPPostRequest(path:body:onCompletion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.759976"
+            timestampString = "550512793.513263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
@@ -1832,11 +1720,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.760011"
+            timestampString = "550512793.5132999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "makeHTTPPostRequest(path:body:onCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JugOrder/DataModel/RestAPIManager.swift"
+            timestampString = "550512793.5133359"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "makeHTTPPostRequest(path:body:onCompletion:)"
             landmarkType = "7">
             <Locations>
@@ -1880,11 +1784,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.760047"
+            timestampString = "550512793.5133719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "makeHTTPPostRequest(path:body:onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1896,12 +1800,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/OrderModel.swift"
-            timestampString = "550332538.781226"
+            timestampString = "550512793.513423"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "createOrderItems(pOrderID:pProducts:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "createOrderItems(pProducts:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1912,12 +1816,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/OrderModel.swift"
-            timestampString = "550332538.78128"
+            timestampString = "550512793.513468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "readOrder(table:completion:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "readOrder(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1928,11 +1832,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.760125"
+            timestampString = "550512793.513507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "takeOrder(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1944,11 +1848,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.760314"
+            timestampString = "550512793.513871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "takeOrder(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1960,11 +1864,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.7604949"
+            timestampString = "550512793.514241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "takeOrder(_:)"
             landmarkType = "7">
             <Locations>
@@ -2008,12 +1912,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/OrderModel.swift"
-            timestampString = "550332538.781932"
+            timestampString = "550512793.514671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "readOrder(table:completion:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "readOrder(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2024,11 +1928,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.760687"
+            timestampString = "550512793.514719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "downloadedAllData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2056,11 +1960,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.760744"
+            timestampString = "550512793.514791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "timedNotifications(selectedTable:inSeconds:completion:)"
             landmarkType = "7">
             <Locations>
@@ -2104,11 +2008,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.760924"
+            timestampString = "550512793.515175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "timedNotifications(selectedTable:inSeconds:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2120,11 +2024,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.7611001"
+            timestampString = "550512793.515587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "timedNotifications(selectedTable:inSeconds:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2136,27 +2040,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.761279"
+            timestampString = "550512793.5161639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.76132"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "downloadedAllData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2167,24 +2055,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.761356"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "takeOrder(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.081198"
+            timestampString = "550512793.5162539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -2200,7 +2072,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.081279"
+            timestampString = "550512793.5163161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
@@ -2216,7 +2088,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.76156"
+            timestampString = "550512793.516374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -2232,11 +2104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.761602"
+            timestampString = "550512793.516434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "makeHTTPPostRequest(path:body:onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2312,12 +2184,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/OrderModel.swift"
-            timestampString = "550332538.783125"
+            timestampString = "550512793.516539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "createOrderItems(pOrderID:pProducts:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "createOrderItems(pProducts:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2344,7 +2216,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.081421"
+            timestampString = "550512793.516624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -2392,7 +2264,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Items/Hookah Mix/HookahMixViewController.swift"
-            timestampString = "550296727.08196"
+            timestampString = "550512793.516748"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
@@ -2408,11 +2280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/ViewController.swift"
-            timestampString = "550332840.761739"
+            timestampString = "550512793.516813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2424,7 +2296,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.761929"
+            timestampString = "550512793.517399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -2440,7 +2312,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.761969"
+            timestampString = "550512793.517459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
@@ -2456,7 +2328,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.762006"
+            timestampString = "550512793.517498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -2472,7 +2344,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.7620389"
+            timestampString = "550512793.517536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -2488,7 +2360,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.762074"
+            timestampString = "550512793.517571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
@@ -2504,7 +2376,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.762128"
+            timestampString = "550512793.517606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
@@ -2520,7 +2392,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.762164"
+            timestampString = "550512793.517643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -2536,7 +2408,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.762199"
+            timestampString = "550512793.517678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -2600,7 +2472,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.762285"
+            timestampString = "550512793.5177341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
@@ -2632,11 +2504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.762334"
+            timestampString = "550512793.517787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2648,7 +2520,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoadViewController.swift"
-            timestampString = "550270200.2444251"
+            timestampString = "550508005.147976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -2664,7 +2536,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.762383"
+            timestampString = "550512793.517862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
@@ -2680,7 +2552,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoadViewController.swift"
-            timestampString = "550270200.2447979"
+            timestampString = "550508005.148031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -2728,7 +2600,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoginViewController.swift"
-            timestampString = "550332840.762431"
+            timestampString = "550507904.41526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -2744,7 +2616,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoginViewController.swift"
-            timestampString = "550332840.762466"
+            timestampString = "550507904.4153121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -2792,7 +2664,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoginViewController.swift"
-            timestampString = "550332840.7624969"
+            timestampString = "550507904.415356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -2808,7 +2680,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoginViewController.swift"
-            timestampString = "550332840.7625279"
+            timestampString = "550507904.415398"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -2824,7 +2696,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoginViewController.swift"
-            timestampString = "550332840.762558"
+            timestampString = "550507904.415439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -2840,7 +2712,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoadViewController.swift"
-            timestampString = "550270200.244877"
+            timestampString = "550508005.14815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -2856,7 +2728,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoadViewController.swift"
-            timestampString = "550270200.244912"
+            timestampString = "550508005.148198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -2872,7 +2744,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoadViewController.swift"
-            timestampString = "550270200.244962"
+            timestampString = "550508005.148243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -2888,7 +2760,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoginViewController.swift"
-            timestampString = "550332840.7626179"
+            timestampString = "550507904.415542"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -2904,7 +2776,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/LoginViewController.swift"
-            timestampString = "550332840.7626491"
+            timestampString = "550507904.415602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -2936,7 +2808,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/ProductModel.swift"
-            timestampString = "550332840.762692"
+            timestampString = "550512793.518019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -3031,24 +2903,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JugOrder/Tables/TableViewController.swift"
-            timestampString = "550332840.762872"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "JugOrder/DataModel/RestAPIManager.swift"
-            timestampString = "550332840.7629091"
+            timestampString = "550512793.518095"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"

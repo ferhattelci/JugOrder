@@ -1,0 +1,6 @@
+framework module Pods_JugOrder {
+  umbrella header "Pods-JugOrder-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -68,7 +68,6 @@
                                             <outlet property="tableName" destination="clM-CA-9lS" id="gYR-PX-WVR"/>
                                             <outlet property="tablePrice" destination="deD-N1-fcP" id="D59-ho-O5a"/>
                                             <outlet property="tableTimer" destination="S16-SO-s6e" id="0Uz-fe-o8U"/>
-                                            <segue destination="psM-pW-bBH" kind="presentation" identifier="orderSegue" id="wCY-Ec-inM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -91,7 +90,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-exit-25" id="MRq-Yu-Zpf">
                             <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="3Tf-fD-Pno" kind="presentation" identifier="segueLogout" id="ViQ-oe-FRl"/>
+                                <action selector="rightBar:" destination="Ecc-4Q-MX2" id="g8w-Cd-sJK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -237,10 +236,17 @@
                                 <action selector="closeVC:" destination="0HC-9R-GBv" id="Esr-mx-JIg"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icons8-more-48" style="plain" id="z8S-VX-MaR">
+                            <view key="customView" contentMode="scaleAspectFill" semanticContentAttribute="forceRightToLeft" id="IMj-lo-8Xh">
+                                <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="navOptionView" destination="z8S-VX-MaR" id="aQP-Qn-RLd"/>
                         <outlet property="orderButton" destination="7Pf-Lz-ex4" id="7Kw-Ne-Wjh"/>
-                        <outlet property="orderTable" destination="Wr5-tx-joz" id="cGG-2Z-uSQ"/>
                         <outlet property="tableView" destination="Wr5-tx-joz" id="C8k-Xv-N0s"/>
                     </connections>
                 </viewController>
@@ -272,7 +278,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="2aX-7Q-2m7">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="psM-pW-bBH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="rootTabBar" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="psM-pW-bBH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HKM-oU-KeN">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -461,7 +467,7 @@
         <!--Navigation Controller-->
         <scene sceneID="s3a-qj-t8J">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y1S-qA-fac" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="viewNavController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y1S-qA-fac" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="icons8-purchase-order-50" id="nfP-UQ-8D3">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                         <color key="badgeColor" red="0.92549019610000005" green="0.2470588235" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1215,6 +1221,7 @@
         <image name="icons8-hide-50" width="50" height="50"/>
         <image name="icons8-hookah-filled-50" width="37" height="37"/>
         <image name="icons8-meal-filled-50" width="37" height="37"/>
+        <image name="icons8-more-48" width="48" height="48"/>
         <image name="icons8-plus-filled-90" width="90" height="90"/>
         <image name="icons8-purchase-order-50" width="37" height="37"/>
         <image name="icons8-search-filled-50" width="37" height="37"/>

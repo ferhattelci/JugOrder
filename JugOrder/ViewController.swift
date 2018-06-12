@@ -8,13 +8,17 @@
 
 import UIKit
 import UserNotifications
+import NavBarDropdownMenu
 
 var orderedProducts : [String: [ProductModel]] = [:]
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var orderTable: UITableView!
+    @IBOutlet weak var navOptionView: UIBarButtonItem!
     var selectedTable = TableModel()
+    var orderTable = OrderModel()
+
     
     @IBAction func closeVC(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -30,18 +34,61 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         orderButton.layer.borderWidth = 1
         orderButton.layer.cornerRadius = 10 // optional
         
+        //init orderedProducts dict
         orderedProducts.removeAll()
-
         orderedProducts.updateValue([ProductModel](), forKey: "aktuelle Bestellung")
         orderedProducts.updateValue([ProductModel](), forKey: "ausstehende Bestellung")
+        
+        //get data for this table
         if !((selectedTable.orderedDate?.isEmpty)!) {
             TableModel.downloadTable(id: String(selectedTable.id!)) { (result) in
                 orderedProducts["ausstehende Bestellung"] = result
                 self.tableView.reloadData()
             }
-        } 
+        }
         
+        //init drop down menu
+        let items = ["umbuchen", "bezahlen"]
+        
+        let menuView = BTNavigationDropdownMenu.init(title: ". . .", items: items)
+        self.navOptionView.customView = menuView
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            print("select")
+            if indexPath == 0 {
+                if self?.orderTable.id != nil {
+                    self?.reBook()
+                }
+            }
+            else {
+                
+            }
+        }
+        menuView.shouldChangeTitleText = false
+        
+        //init order
+        orderTable.TableID = selectedTable.id
+        orderTable.EmployeeID = activeUser.id
+        
+        orderTable.readOrder { (order) in
+            
+        }
+    }
+    
+    func reBook(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navController = storyboard.instantiateViewController(withIdentifier: "TableNavigationController") as! UINavigationController
+        let destinationNavigationController = navController.viewControllers[0] as! TableViewController
+        destinationNavigationController.reBook = true
+        destinationNavigationController.reBookOrder = orderTable
 
+        
+        present(navController, animated: true, completion: nil)
+        
+    }
+    
+    func pay(){
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         checkDataExist()
@@ -64,11 +111,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBAction func takeOrder(_ sender: Any) {
         //Bestellung durchgehen
-        OrderModel.readOrder(table: String(selectedTable.id!)) { (order) in
-            if (order.id == nil){
-                OrderModel.createOrder(table: String(self.selectedTable.id!), employee: String(activeUser.id), pproducts: orderedProducts["aktuelle Bestellung"]!)
+        orderTable.readOrder { (order) in
+            if (self.orderTable.id == nil){
+                self.orderTable.createOrder(pproducts: orderedProducts["aktuelle Bestellung"]!)
             } else {
-                OrderModel.createOrderItems(pOrderID: String(order.id!), pProducts: orderedProducts["aktuelle Bestellung"]!)
+                self.orderTable.createOrderItems(pProducts: orderedProducts["aktuelle Bestellung"]!)
             }
             
             self.timedNotifications(selectedTable: self.selectedTable, inSeconds: 30) { (success) in
@@ -80,7 +127,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             var newArray = [ProductModel]()
             newArray = orderedProducts["aktuelle Bestellung"]!
             newArray = newArray + orderedProducts["ausstehende Bestellung"]!
-
+            
             
             orderedProducts["ausstehende Bestellung"] = newArray
             orderedProducts["aktuelle Bestellung"]?.removeAll()
@@ -88,10 +135,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.checkDataExist()
-
+                
             }
         }
     }
+
     
     //MARK Notification
     
@@ -196,6 +244,12 @@ extension ViewController:TableViewCellDelegate {
     
     func tableViewCell(doubleTapActionDelegatedFrom cell: ViewTableViewCell) {
         let indexPath = tableView.indexPath(for: cell)
+        let key = Array(orderedProducts.keys)[(indexPath?.section)!]
+        let product = orderedProducts[key]![(indexPath?.row)!]
+        orderedProducts["aktuelle Bestellung"]?.append(product)
         print("doubleTap \(String(describing: indexPath)) ")
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
 }
 }

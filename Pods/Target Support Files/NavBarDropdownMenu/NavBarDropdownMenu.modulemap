@@ -1,0 +1,6 @@
+framework module NavBarDropdownMenu {
+  umbrella header "NavBarDropdownMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

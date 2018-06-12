@@ -75,11 +75,18 @@ class RestAPIManager: NSObject {
             onCompletion(json as NSDictionary)
         }
     }
+    func transferOrder(body: String) {
+        let route = baseURL + "order/transferTable.php"
+        
+        makeHTTPPostRequest(path: route, body: body) { (json, err) in
+          //  onCompletion(json as NSDictionary)
+        }
+    }
     
-    func createOrderItems(body:String, onCompletion: @escaping (NSDictionary) -> Void) {
+    func createOrderItems(body:String) {
         let route = baseURL + "order/createOrderItems.php"
         makeHTTPPostRequest(path: route, body: body) { (json, err) in
-            onCompletion(json as NSDictionary)
+            //onCompletion(json as NSDictionary)
         }
     }
     

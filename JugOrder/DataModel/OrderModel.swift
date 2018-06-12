@@ -21,11 +21,10 @@ class OrderModel: NSObject {
         
     }
     
-    static func readOrder(table: String, completion: @escaping (_ result: OrderModel) -> Void) {
+    func readOrder( completion: @escaping (_ result: OrderModel) -> Void) {
 
-        let order = OrderModel()
 
-        RestAPIManager.sharedInstance.getOrder(id: table) { (json) in
+        RestAPIManager.sharedInstance.getOrder(id: String(TableID!)) { (json) in
             if let records = json["records"] as? NSArray {
                 var jsonElement = NSDictionary()
                 jsonElement = records[0] as! NSDictionary
@@ -36,47 +35,48 @@ class OrderModel: NSObject {
                     let orderDate = jsonElement["OrderDate"] as? String
 
                 {
-                    order.id = Int(id)
-                    order.EmployeeID = Int(employeeID)
-                    order.Paid = Int(Paid)
-                    order.TableID = Int(tableid)
-                    order.orderedDate = orderDate
+                    self.id = Int(id)
+                    self.EmployeeID = Int(employeeID)
+                    self.Paid = Int(Paid)
+                    self.TableID = Int(tableid)
+                    self.orderedDate = orderDate
         
                     
                 }
-                completion(order)
+                completion(self)
             }
         }
         
     }
     
-    static func createOrder(table: String, employee: String, pproducts: [ProductModel]) {
-
-        let body = "TableID="+table+"&EmployeeID="+employee+"&Paid=0"
-
+    func createOrder(pproducts: [ProductModel]) {
+        let body = "TableID="+String(TableID!)+"&EmployeeID="+String(EmployeeID!)+"&Paid=0"
+        
         RestAPIManager.sharedInstance.createOrder(body: body) { (json) in
             if let records = json["records"] as? NSArray {
                 var jsonElement = NSDictionary()
                 jsonElement = records[0] as! NSDictionary
                 if let id = jsonElement["id"] as? String {
-                    createOrderItems(pOrderID: id, pProducts: pproducts)
+                    self.id = Int(id)
+                    self.createOrderItems(pProducts: pproducts)
                 }
             }
         }
     }
-    static func createOrderItems(pOrderID: String, pProducts: [ProductModel]) {
+    func createOrderItems(pProducts: [ProductModel]) {
         
-        var body = "OrderID="+pOrderID
+        var body = "OrderID="+String(self.id!)
         for product in pProducts {
             body = body + "&ProductID="+String(product.id!)+"&Details="+product.details!+"&Price="+String(product.price!)+"&Quantity="+String(product.count!)
-
-            RestAPIManager.sharedInstance.createOrderItems(body: body) { (json) in
-        
-            }
-            
-            
+            RestAPIManager.sharedInstance.createOrderItems(body: body)
         }
   
+    }
+    
+    func transferOrder(newTableID: String){
+        let body = "id=" + String(id!) + "&TableID=" + newTableID
+        RestAPIManager.sharedInstance.transferOrder(body: body)
+        
     }
         
         
