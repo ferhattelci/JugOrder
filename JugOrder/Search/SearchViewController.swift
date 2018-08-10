@@ -29,7 +29,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Suche ..."
-        searchController.searchBar.tintColor = .jugBlue
+        searchController.searchBar.tintColor = .jugWhite
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
@@ -170,7 +170,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     }
     
     
-    @objc func sliderValueChanged(sender: UISlider){
+    @objc func sliderValueChanged(sender: UIStepper){
         if isFiltering {
             filteredArrayOfProducts[sender.tag].count = Int(sender.value)
         } else {
@@ -201,9 +201,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         if (product.image != nil) {
             cell.productImage.image = product.image!
         }
-        cell.amountSlider.tag = indexPath.row // Use tag to see which cell your slider is located
-        cell.amountSlider.addTarget(self, action: #selector(sliderValueChanged), for: UIControlEvents.valueChanged)
-        cell.amountSlider.value = Float(product.count!)
+        cell.stepperAmount.tag = indexPath.row // Use tag to see which cell your slider is located
+        cell.stepperAmount.addTarget(self, action: #selector(sliderValueChanged), for: UIControlEvents.valueChanged)
+        cell.stepperAmount.value = Double(product.count!)
 
         
         

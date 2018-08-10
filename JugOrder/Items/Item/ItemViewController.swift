@@ -20,7 +20,7 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
         arrayOfProducts = arrayOfProducts.sortProductByName(.orderedAscending)
         
-        refreshControl.tintColor = .jugBlue
+        refreshControl.tintColor = .jugWhite
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         collectionView.addSubview(refreshControl)
         collectionView.alwaysBounceVertical = true
@@ -34,7 +34,7 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayOfProducts.count
     }
-    @objc func sliderValueChanged(sender: UISlider){
+    @objc func sliderValueChanged(sender: UIStepper){
         arrayOfProducts[sender.tag].count = Int(sender.value)
         UIView.performWithoutAnimation {
             self.collectionView.reloadItems(at:[IndexPath.init(row: sender.tag, section: 0)])
@@ -63,9 +63,9 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.productImage.image = product.image!
         }
         
-        cell.amountSlider.tag = indexPath.row // Use tag to see which cell your slider is located
-        cell.amountSlider.addTarget(self, action: #selector(sliderValueChanged), for: UIControlEvents.valueChanged)
-        cell.amountSlider.value = Float(product.count!)
+        cell.stepperAmount.tag = indexPath.row // Use tag to see which cell your slider is located
+        cell.stepperAmount.addTarget(self, action: #selector(sliderValueChanged), for: UIControlEvents.valueChanged)
+        cell.stepperAmount.value = Double(product.count!)
 
         cell.productDetail.text = product.details!
         // add a border
@@ -77,9 +77,10 @@ class ItemViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     @objc func refresh(){
         print("refresh")
-
         refreshControl.endRefreshing()
     }
+    
+
     @IBAction func addProduct(_ sender: Any) {
         let buttonPosition:CGPoint = (sender as AnyObject).convert(.zero, to: self.collectionView)
         let indexPath:IndexPath = self.collectionView.indexPathForItem(at: buttonPosition)!

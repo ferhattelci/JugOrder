@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
        
         UNUserNotificationCenter.current().delegate = self
-        UISearchBar.appearance().tintColor = .jugBlue
-        UINavigationBar.appearance().tintColor = .jugBlue
+        UISearchBar.appearance().tintColor = .jugWhite
+        UINavigationBar.appearance().tintColor = .jugWhite
 
         return true
     }

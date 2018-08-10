@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		94842BAE97C5530DBA588024 /* Pods_JugOrder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7A326F2BDD6073C871CF65 /* Pods_JugOrder.framework */; };
+		EB1A1E22211CAA7A001C9F93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1A1E21211CAA7A001C9F93 /* LoginViewController.swift */; };
 		EB239B4A20C770C200F06FEC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB239B4920C770C200F06FEC /* UserModel.swift */; };
 		EB58441B206EB907007035E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB58441A206EB907007035E0 /* AppDelegate.swift */; };
 		EB58441D206EB907007035E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB58441C206EB907007035E0 /* ViewController.swift */; };
@@ -42,13 +43,13 @@
 		EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */; };
 		EBE9D63320C021E20064C1BB /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63220C021E20064C1BB /* RestAPIManager.swift */; };
 		EBE9D63520C37A620064C1BB /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63420C37A610064C1BB /* OrderModel.swift */; };
-		EBE9D63720C70EEF0064C1BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9D63620C70EEF0064C1BB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B7A326F2BDD6073C871CF65 /* Pods_JugOrder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JugOrder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B25B878B5940E97E3C16B0 /* Pods-JugOrder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JugOrder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JugOrder/Pods-JugOrder.debug.xcconfig"; sourceTree = "<group>"; };
 		C89C7499FBF94B3B9259C946 /* Pods-JugOrder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JugOrder.release.xcconfig"; path = "Pods/Target Support Files/Pods-JugOrder/Pods-JugOrder.release.xcconfig"; sourceTree = "<group>"; };
+		EB1A1E21211CAA7A001C9F93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB239B4920C770C200F06FEC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		EB584417206EB907007035E0 /* JugOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JugOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB58441A206EB907007035E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		EBE9D63020BE1CBD0064C1BB /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
 		EBE9D63220C021E20064C1BB /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		EBE9D63420C37A610064C1BB /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
-		EBE9D63620C70EEF0064C1BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,6 @@
 			children = (
 				EB70B38020C95EDA0090F987 /* DownloadTask */,
 				EBE9D62E20BDCB020064C1BB /* LaunchViewController.swift */,
-				EBE9D63620C70EEF0064C1BB /* LoginViewController.swift */,
 				EBE9D62120BB89D80064C1BB /* JugTheme.swift */,
 				EB70B37620C955200090F987 /* LoadViewController.swift */,
 				EBE9D60320BB18030064C1BB /* DataModel */,
@@ -151,6 +150,7 @@
 				EBE9D61F20BB69360064C1BB /* ViewTableViewCell.swift */,
 				EB58441C206EB907007035E0 /* ViewController.swift */,
 				EB58441E206EB907007035E0 /* Main.storyboard */,
+				EB1A1E21211CAA7A001C9F93 /* LoginViewController.swift */,
 				EB584421206EB907007035E0 /* Assets.xcassets */,
 				EB584423206EB907007035E0 /* LaunchScreen.storyboard */,
 				EB584426206EB907007035E0 /* Info.plist */,
@@ -368,6 +368,7 @@
 				EB70B37B20C95B1C0090F987 /* DownloadTask.swift in Sources */,
 				EBE9D61E20BB61060064C1BB /* HookahViewController.swift in Sources */,
 				EB70B37F20C95B430090F987 /* ResultType.swift in Sources */,
+				EB1A1E22211CAA7A001C9F93 /* LoginViewController.swift in Sources */,
 				EBE9D62D20BDBFE70064C1BB /* HookahModel.swift in Sources */,
 				EBE9D63320C021E20064C1BB /* RestAPIManager.swift in Sources */,
 				EBE9D62620BCA87B0064C1BB /* TableModel.swift in Sources */,
@@ -384,7 +385,6 @@
 				EBE9D63120BE1CBD0064C1BB /* TableCollectionViewCell.swift in Sources */,
 				EBE9D63520C37A620064C1BB /* OrderModel.swift in Sources */,
 				EBE9D5F820BB174E0064C1BB /* ItemViewController.swift in Sources */,
-				EBE9D63720C70EEF0064C1BB /* LoginViewController.swift in Sources */,
 				EB70B37D20C95B320090F987 /* GenericDownloadTask.swift in Sources */,
 				EBE9D61520BB35D50064C1BB /* ItemCollectionViewCell.swift in Sources */,
 			);

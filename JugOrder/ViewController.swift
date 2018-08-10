@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = selectedTable.name!
+        self.navigationItem.title = selectedTable.name! + " - " + selectedTable.category!
         navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view, typically from a nib.
         orderButton.layer.borderColor = UIColor.lightGray.cgColor
@@ -118,7 +118,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.orderTable.createOrderItems(pProducts: orderedProducts["aktuelle Bestellung"]!)
             }
             
-            self.timedNotifications(selectedTable: self.selectedTable, inSeconds: 30) { (success) in
+            self.timedNotifications(selectedTable: self.selectedTable, inSeconds: 600) { (success) in
                 if (success) {
                     print("Erfolgreich")
                 }
@@ -171,7 +171,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK TABLE
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let key = Array(orderedProducts.keys)[section]
+        let key = Array(orderedProducts.keys.sorted())[section]
         
         return (orderedProducts[key]?.count)!
     }
@@ -180,14 +180,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Array(orderedProducts.keys)[section]
+        return Array(orderedProducts.keys.sorted())[section]
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewTableViewCell
-        let key = Array(orderedProducts.keys)[indexPath.section]
-        let product = orderedProducts[key]![indexPath.row]
+        let key = Array(orderedProducts.keys.sorted())[indexPath.section]
+        let products = orderedProducts[key]!.sorted(by: { $0.name! < $1.name! })
+        
+        let product = products[indexPath.row]
         cell.delegate = self
         
         cell.productCategory.text = product.category

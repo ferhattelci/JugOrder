@@ -88,7 +88,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tische" id="geS-JA-oCv">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-exit-25" id="MRq-Yu-Zpf">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="rightBar:" destination="Ecc-4Q-MX2" id="g8w-Cd-sJK"/>
                             </connections>
@@ -204,7 +204,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-Lz-ex4">
                                 <rect key="frame" x="16" y="571" width="343" height="37"/>
-                                <color key="backgroundColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="bestellen">
                                     <color key="titleColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -231,7 +231,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bestellungen" id="Gec-Gt-bvO">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="AYW-8e-4LA">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeVC:" destination="0HC-9R-GBv" id="Esr-mx-JIg"/>
                             </connections>
@@ -283,9 +283,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HKM-oU-KeN">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.25098039215686274" green="0.25490196078431371" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="y1S-qA-fac" kind="relationship" relationship="viewControllers" id="MRv-4w-i2B"/>
@@ -311,13 +311,13 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -383,17 +383,12 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOg-6Q-OxT">
                                                     <rect key="frame" x="104" y="167" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="icons8-plus-filled-90"/>
+                                                    <state key="normal" image="icons8-plus-90-3"/>
                                                     <connections>
                                                         <action selector="addProduct:" destination="Lph-RV-6lq" eventType="touchUpInside" id="Ozx-cI-3cQ"/>
                                                         <action selector="addProduct:" destination="4Wr-hw-R1w" eventType="touchUpInside" id="ruL-sT-ioS"/>
                                                     </connections>
                                                 </button>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-Ko-j9d">
-                                                    <rect key="frame" x="6" y="214" width="136" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKI-0K-7ew">
                                                     <rect key="frame" x="8" y="195" width="42" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -401,15 +396,20 @@
                                                     <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="uzL-te-cyu">
+                                                    <rect key="frame" x="7" y="213" width="94" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </stepper>
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="amountSlider" destination="mv3-Ko-j9d" id="V4f-Vt-sLM"/>
                                             <outlet property="productAmount" destination="qKI-0K-7ew" id="Gbg-vK-jOh"/>
                                             <outlet property="productCategory" destination="FZe-J1-g2L" id="nMD-kZ-pKH"/>
                                             <outlet property="productImage" destination="jux-Q7-vzX" id="xEE-Tq-Hy2"/>
                                             <outlet property="productName" destination="VGa-5H-7He" id="RT4-g9-DCn"/>
                                             <outlet property="productPrice" destination="qvP-Yd-QMJ" id="Ny6-UR-gda"/>
+                                            <outlet property="stepperAmount" destination="uzL-te-cyu" id="12M-kQ-7Cq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -424,7 +424,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Suche" id="zeQ-2Y-gZz">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="lxp-HH-cx3">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeVC:" destination="4Wr-hw-R1w" id="UQm-Vd-OAd"/>
                             </connections>
@@ -446,13 +446,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IH6-Po-GVK">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -476,13 +476,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3vc-qc-c06">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -520,13 +521,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Hookah" id="RE2-cI-ew8">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="1AO-w9-koC">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeVC:" destination="HDR-PE-BMV" id="Fwc-sx-MCf"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Mix erstellen" id="HHm-jR-tmK">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="r4x-fa-ePu" kind="presentation" id="wSW-hJ-m7L"/>
                             </connections>
@@ -566,7 +567,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Drinks" id="tB2-Jh-0vp">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="2pz-Sr-VWZ">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeVC:" destination="9ma-Sg-80c" id="0Ic-sL-YVv"/>
                             </connections>
@@ -659,13 +660,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Hookah Mix" id="wlQ-GO-fm8">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="OrX-8U-pGf">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeVC:" destination="Sid-3E-lPT" id="rI5-hj-CIy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="3lr-qc-aYG">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="mixHookah:" destination="Sid-3E-lPT" id="5jl-8U-tQf"/>
                             </connections>
@@ -682,12 +683,12 @@
         <!--Login View Controller-->
         <scene sceneID="82P-ja-vzt">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Tf-fD-Pno" customClass="LoginViewController" customModule="JugOrder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Tf-fD-Pno" customClass="LoginViewController" customModule="JugOrder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WAt-tb-V6f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" placeholder="Personal Nr" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNC-8D-zAl">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Benutzername" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNC-8D-zAl">
                                 <rect key="frame" x="12" y="364" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="0.10438913312512568" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -695,11 +696,11 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="2hv-Sd-zaK"/>
                                     <constraint firstAttribute="height" constant="60" id="xnH-CV-RqU"/>
                                 </constraints>
-                                <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nt-9j-9Yg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nt-9j-9Yg">
                                 <rect key="frame" x="12" y="433" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="0.1043891331" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -707,13 +708,13 @@
                                     <constraint firstAttribute="height" constant="60" id="KHd-UK-ogv"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="h68-o2-BlY"/>
                                 </constraints>
-                                <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-xN-pqF">
                                 <rect key="frame" x="13" y="502" width="348" height="58"/>
-                                <color key="backgroundColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="348" id="P7c-Fd-jFq"/>
                                     <constraint firstAttribute="height" constant="58" id="ScH-IA-mIe"/>
@@ -751,6 +752,9 @@
                                     <constraint firstAttribute="height" constant="76" id="qG0-v8-IiN"/>
                                 </constraints>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FC-GY-i1z">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -761,13 +765,17 @@
                             <constraint firstItem="LHY-Ay-Phs" firstAttribute="trailing" secondItem="HNC-8D-zAl" secondAttribute="trailing" constant="13" id="Dep-Ti-UdK"/>
                             <constraint firstItem="5nt-9j-9Yg" firstAttribute="leading" secondItem="LHY-Ay-Phs" secondAttribute="leading" constant="12" id="Ht1-3s-hlO"/>
                             <constraint firstItem="K5J-5d-Z6H" firstAttribute="centerX" secondItem="hVM-Wf-cyp" secondAttribute="centerX" id="IME-Dh-Uqb"/>
+                            <constraint firstItem="2FC-GY-i1z" firstAttribute="width" secondItem="WAt-tb-V6f" secondAttribute="width" id="JAF-FR-vK3"/>
                             <constraint firstItem="hdU-zw-9ZE" firstAttribute="top" secondItem="LHY-Ay-Phs" secondAttribute="top" constant="122" id="Mzs-2w-haE"/>
+                            <constraint firstItem="2FC-GY-i1z" firstAttribute="centerX" secondItem="LHY-Ay-Phs" secondAttribute="centerX" id="P9O-bH-bbQ"/>
                             <constraint firstItem="LHY-Ay-Phs" firstAttribute="bottom" secondItem="hVM-Wf-cyp" secondAttribute="bottom" constant="37" id="X1E-k6-Yju"/>
                             <constraint firstItem="5nt-9j-9Yg" firstAttribute="top" secondItem="HNC-8D-zAl" secondAttribute="bottom" constant="9" id="bcM-Bp-TBa"/>
                             <constraint firstItem="LHY-Ay-Phs" firstAttribute="trailing" secondItem="4KD-xN-pqF" secondAttribute="trailing" constant="14" id="by7-Gq-POU"/>
                             <constraint firstItem="hdU-zw-9ZE" firstAttribute="leading" secondItem="LHY-Ay-Phs" secondAttribute="leading" constant="70" id="gq2-1j-CqZ"/>
+                            <constraint firstItem="2FC-GY-i1z" firstAttribute="height" secondItem="WAt-tb-V6f" secondAttribute="height" id="hSK-1E-bBe"/>
                             <constraint firstItem="HNC-8D-zAl" firstAttribute="leading" secondItem="LHY-Ay-Phs" secondAttribute="leading" constant="12" id="ibU-74-SVv"/>
                             <constraint firstItem="K5J-5d-Z6H" firstAttribute="top" secondItem="LHY-Ay-Phs" secondAttribute="top" constant="194" id="k8D-oO-eEz"/>
+                            <constraint firstItem="2FC-GY-i1z" firstAttribute="centerY" secondItem="LHY-Ay-Phs" secondAttribute="centerY" id="ktu-YZ-8YC"/>
                             <constraint firstItem="hVM-Wf-cyp" firstAttribute="leading" secondItem="LHY-Ay-Phs" secondAttribute="leading" constant="14" id="mHI-Oh-v9B"/>
                             <constraint firstItem="LHY-Ay-Phs" firstAttribute="trailing" secondItem="5nt-9j-9Yg" secondAttribute="trailing" constant="13" id="op0-No-fUZ"/>
                             <constraint firstItem="4KD-xN-pqF" firstAttribute="leading" secondItem="LHY-Ay-Phs" secondAttribute="leading" constant="13" id="sfH-jK-8fh"/>
@@ -782,7 +790,130 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBI-bn-k3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762.39999999999998" y="-1164.4677661169417"/>
+            <point key="canvasLocation" x="543" y="-2232"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="ZT2-ae-dfU">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ypf-i1-vBV" customClass="TestViewController" customModule="JugOrder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1uf-w1-2ai">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsB-9O-UY3">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Benutzername" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AfA-ze-g5J">
+                                        <rect key="frame" x="13" y="364" width="349" height="60"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="0.1043891331" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="349" id="kIt-KJ-0dI"/>
+                                            <constraint firstAttribute="height" constant="60" id="tpl-WN-W18"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ypf-i1-vBV" id="UVv-7X-5Cu"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwD-XU-hxI">
+                                        <rect key="frame" x="14" y="502" width="348" height="58"/>
+                                        <color key="backgroundColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="348" id="NoR-nS-zb9"/>
+                                            <constraint firstAttribute="height" constant="58" id="p48-ZH-Shk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="Ypf-i1-vBV" eventType="touchUpInside" id="Nll-dj-v4U"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeB-Lu-3B5">
+                                        <rect key="frame" x="13" y="433" width="350" height="60"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="0.1043891331" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="CHb-Kz-lTh"/>
+                                            <constraint firstAttribute="height" constant="60" id="nIO-mO-49E"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ypf-i1-vBV" id="mmO-gJ-6nU"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Logo_final_neu" translatesAutoresizingMaskIntoConstraints="NO" id="8xx-75-tEk">
+                                        <rect key="frame" x="73" y="133" width="234" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="76" id="nAd-aW-lw7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melde dich an um Jug Order zu nutzen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-UP-tqA">
+                                        <rect key="frame" x="67" y="217" width="240" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jpR-r5-L0h"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neu bei Jug Order? Wende dich an den Administrator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7w-5O-JiK">
+                                        <rect key="frame" x="13" y="601" width="348" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="dTU-Pk-lcI"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="348" id="yps-tS-Ces"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8xx-75-tEk" firstAttribute="top" secondItem="qsB-9O-UY3" secondAttribute="top" constant="133" id="0n9-zj-65T"/>
+                                    <constraint firstItem="3Q8-UP-tqA" firstAttribute="top" secondItem="8xx-75-tEk" secondAttribute="bottom" constant="8" symbolic="YES" id="43k-0d-wxQ"/>
+                                    <constraint firstItem="WeB-Lu-3B5" firstAttribute="leading" secondItem="qsB-9O-UY3" secondAttribute="leading" constant="12.5" id="5L3-lv-W9A"/>
+                                    <constraint firstItem="ZwD-XU-hxI" firstAttribute="top" secondItem="WeB-Lu-3B5" secondAttribute="bottom" constant="9" id="75l-2C-Svw"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZwD-XU-hxI" secondAttribute="bottom" constant="107" id="GhN-lc-y5l"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZwD-XU-hxI" secondAttribute="trailing" constant="13.5" id="H2m-Ey-bOV"/>
+                                    <constraint firstItem="AfA-ze-g5J" firstAttribute="top" secondItem="3Q8-UP-tqA" secondAttribute="bottom" constant="97" id="Hga-EG-V3y"/>
+                                    <constraint firstItem="8xx-75-tEk" firstAttribute="leading" secondItem="qsB-9O-UY3" secondAttribute="leading" constant="73" id="P0G-1Z-UFH"/>
+                                    <constraint firstItem="T7w-5O-JiK" firstAttribute="leading" secondItem="WeB-Lu-3B5" secondAttribute="leading" id="ShD-je-Z9q"/>
+                                    <constraint firstItem="ZwD-XU-hxI" firstAttribute="leading" secondItem="qsB-9O-UY3" secondAttribute="leading" constant="13.5" id="TpN-QA-8pZ"/>
+                                    <constraint firstItem="8xx-75-tEk" firstAttribute="trailing" secondItem="3Q8-UP-tqA" secondAttribute="trailing" id="UxG-S9-9Bw"/>
+                                    <constraint firstItem="AfA-ze-g5J" firstAttribute="leading" secondItem="qsB-9O-UY3" secondAttribute="leading" constant="13" id="WRL-oy-aW4"/>
+                                    <constraint firstItem="3Q8-UP-tqA" firstAttribute="leading" secondItem="qsB-9O-UY3" secondAttribute="leading" constant="67" id="dvK-RY-xJb"/>
+                                    <constraint firstAttribute="trailing" secondItem="AfA-ze-g5J" secondAttribute="trailing" constant="13" id="eUR-sy-MiT"/>
+                                    <constraint firstItem="3Q8-UP-tqA" firstAttribute="centerX" secondItem="AfA-ze-g5J" secondAttribute="centerX" id="fkp-iR-OUt"/>
+                                    <constraint firstItem="WeB-Lu-3B5" firstAttribute="top" secondItem="AfA-ze-g5J" secondAttribute="bottom" constant="9" id="soI-4d-5Sm"/>
+                                    <constraint firstItem="T7w-5O-JiK" firstAttribute="top" secondItem="ZwD-XU-hxI" secondAttribute="bottom" constant="41" id="tZA-qc-xXr"/>
+                                    <constraint firstAttribute="trailing" secondItem="WeB-Lu-3B5" secondAttribute="trailing" constant="12.5" id="tiE-5P-MdI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qsB-9O-UY3" firstAttribute="centerX" secondItem="mx0-fc-RPJ" secondAttribute="centerX" id="sNp-Bg-zS4"/>
+                            <constraint firstItem="qsB-9O-UY3" firstAttribute="centerY" secondItem="mx0-fc-RPJ" secondAttribute="centerY" id="tCe-xl-YaR"/>
+                            <constraint firstItem="qsB-9O-UY3" firstAttribute="height" secondItem="1uf-w1-2ai" secondAttribute="height" id="upF-c7-CcB"/>
+                            <constraint firstItem="qsB-9O-UY3" firstAttribute="width" secondItem="1uf-w1-2ai" secondAttribute="width" id="vkc-KJ-ZpD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mx0-fc-RPJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="qsB-9O-UY3" id="bv8-5c-Kg3"/>
+                        <outlet property="tfPassword" destination="WeB-Lu-3B5" id="n0O-Lm-OVY"/>
+                        <outlet property="tfUsername" destination="AfA-ze-g5J" id="hQD-HD-tLZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5b-Xo-Grw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="-2232"/>
         </scene>
         <!--Load View Controller-->
         <scene sceneID="Fu1-2k-Ezg">
@@ -794,7 +925,7 @@
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FHT-Yd-hGG">
                                 <rect key="frame" x="64" y="381" width="248" height="2"/>
-                                <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Hic-hk-b9w"/>
                                     <constraint firstAttribute="width" constant="248" id="dNN-D3-dZ3"/>
@@ -835,18 +966,19 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xni-sm-m9g" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="icons8-hookah-filled-50" selectedImage="icons8-hookah-filled-50" id="MfB-NZ-ncO">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="xf2-7L-xbY">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -965,13 +1097,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XDR-xC-79G">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1009,7 +1141,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Snacks" largeTitleDisplayMode="always" id="lLq-5S-dGm">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="gdk-KA-UxM">
-                            <color key="tintColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeOrder:" destination="err-c3-AlL" id="uPb-Zn-2dv"/>
                             </connections>
@@ -1031,13 +1163,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JNd-IN-pke">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1057,13 +1189,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OKY-uy-Jy9">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1139,29 +1271,29 @@
                                                     <rect key="frame" x="45" y="3" width="60" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="rNc-QX-U0S">
-                                                    <rect key="frame" x="6" y="214" width="136" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </slider>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgH-z7-QhH">
                                                     <rect key="frame" x="104" y="167" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="icons8-plus-filled-90"/>
+                                                    <state key="normal" image="icons8-plus-90-3"/>
                                                     <connections>
                                                         <action selector="addProduct:" destination="Lph-RV-6lq" eventType="touchUpInside" id="OQr-id-TUP"/>
                                                     </connections>
                                                 </button>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dtC-V7-Zm5">
+                                                    <rect key="frame" x="6" y="214" width="94" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </stepper>
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="amountSlider" destination="rNc-QX-U0S" id="UXS-ET-uHH"/>
                                             <outlet property="productAmount" destination="Tph-eX-asx" id="LFg-0x-7CW"/>
                                             <outlet property="productCategory" destination="31B-f9-yuN" id="Ug1-Gr-GRH"/>
                                             <outlet property="productDetail" destination="9Qm-Tz-A0s" id="Vbb-Mt-2tS"/>
                                             <outlet property="productImage" destination="ZO2-mC-fW3" id="vst-9X-wyK"/>
                                             <outlet property="productName" destination="yu3-4D-jFg" id="PeO-IE-ygy"/>
                                             <outlet property="productPrice" destination="zPS-wp-OGY" id="qRY-0E-7Le"/>
+                                            <outlet property="stepperAmount" destination="dtC-V7-Zm5" id="15o-hM-hXr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1196,12 +1328,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="fwT-Ue-4N2">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.57647058819999997" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1222,7 +1354,7 @@
         <image name="icons8-hookah-filled-50" width="37" height="37"/>
         <image name="icons8-meal-filled-50" width="37" height="37"/>
         <image name="icons8-more-48" width="48" height="48"/>
-        <image name="icons8-plus-filled-90" width="90" height="90"/>
+        <image name="icons8-plus-90-3" width="90" height="90"/>
         <image name="icons8-purchase-order-50" width="37" height="37"/>
         <image name="icons8-search-filled-50" width="37" height="37"/>
         <image name="icons8-soda-filled-50" width="37" height="37"/>

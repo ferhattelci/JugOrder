@@ -14,7 +14,7 @@ class LaunchViewController: UIViewController, HomeModelProtocol {
     func downloadedAllData() {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! TestViewController
         
         UIApplication.shared.keyWindow?.rootViewController = viewController
         

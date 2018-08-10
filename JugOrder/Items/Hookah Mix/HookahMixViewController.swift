@@ -33,7 +33,6 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
     
     
     @IBAction func mixHookah(_ sender: Any) {
-
         var costlyPrice = 0
         var tabacco = [ProductModel]()
         for i in 0 ..< collectionView.indexPathsForSelectedItems!.count {
@@ -50,8 +49,9 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
 
         }
 
-        
-        showInputDialog(price: costlyPrice, tabacco: tabacco)
+        if tabacco.count > 1 {
+            showInputDialog(price: costlyPrice, tabacco: tabacco)
+        }
     }
     
     @IBAction func closeVC(_ sender: Any) {
@@ -84,7 +84,7 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             })
             hookah.details = tabaccos.joined(separator: ", ")
      
-            hookah.image = #imageLiteral(resourceName: "26289119_digital-image")
+            hookah.image = #imageLiteral(resourceName: "blueHookah")
             hookah.tabak = tabacco
             hookah.imagePath = "blueHookah.png"
             hookah.createHookah()
@@ -95,7 +95,7 @@ class HookahMixViewController: UIViewController, UICollectionViewDataSource, UIC
             hookahsC.updateValue(hookahs, forKey: "Erfrischend")
             Products.updateValue(hookahsC, forKey: "Hookah")*/
             self.reset()
-          //  hookah.addShishaToDB()
+            
             
         }
         

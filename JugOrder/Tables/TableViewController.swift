@@ -33,7 +33,7 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         selectedSegment = keys[0]
         
         segment.sizeToFit()
-        segment.tintColor = .jugBlue
+        segment.tintColor = .jugWhite
         segment.selectedSegmentIndex = 0;
         segment.addTarget(self, action: #selector(segmentedControlValueChanged), for: UIControlEvents.valueChanged)
         segment.addTarget(self, action: #selector(segmentedControlValueChanged), for: UIControlEvents.touchUpInside)
@@ -46,7 +46,7 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        refreshControl.tintColor = .jugBlue
+        refreshControl.tintColor = .jugWhite
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         collectionView.addSubview(refreshControl)
         collectionView.alwaysBounceVertical = true
@@ -97,7 +97,7 @@ class TableViewController: UIViewController, UICollectionViewDelegate, UICollect
         } else {
             activeUser.createEndWork()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! TestViewController
             self.present(loginVC, animated: true, completion: nil)
 
         }

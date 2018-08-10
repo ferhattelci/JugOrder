@@ -10,11 +10,10 @@ import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productDetail: UILabel!
-    
+    @IBOutlet weak var stepperAmount: UIStepper!
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productCategory: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productAmount: UILabel!
-    @IBOutlet weak var amountSlider: UISlider!
 }

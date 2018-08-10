@@ -28,7 +28,7 @@ extension UIColor {
  
     static let jugWhite = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
  
-    static let jugBlue = UIColor(red: 64.0/255.0, green: 65.0/255.0, blue: 91.0/255.0, alpha: 1.0)
+    static let jugBlue = UIColor(red: 54.0/255.0, green: 147.0/255.0, blue: 193.0/255.0, alpha: 1.0)
 
     static let jugYellow = UIColor(red: 230.0/255.0, green: 239.0/255.0, blue: 194.0/255.0, alpha: 1.0)
 }
